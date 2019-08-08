@@ -7,32 +7,38 @@ page{background: #f8f8f8}
 .logOut{height: 100%;}
 .avatarWrapper{display: flex;margin-top: 40rpx;padding-left: 40rpx;}
 .avatarWrapper>text{line-height: 120rpx;margin-left: 20rpx;}
-.avatar{width: 120rpx;height: 120rpx;border-radius: 50%;background: gray;}
+.avatar{width: 120rpx;height: 120rpx;border-radius: 50%;background: gray;text-align: center;}
+.icon-geren{color: #ddd;line-height: 100rpx;font-size: 60rpx;}
 .loginRight{height: 100rpx;padding-left: 40rpx;background: #000;color: #ae9d78;line-height: 100rpx;margin-top: 40rpx;}
 
-.card{background: #fff;padding: 20px;margin-bottom: 20rpx;}
 
+
+.card{background: #fff;padding: 20px;margin-bottom: 20rpx;}
 .cardTitle{border-bottom: 1px solid #eee;line-height: 2em}
 .cardListWrapper{display: flex;width: 100%;margin-top: 20rpx;flex-wrap: wrap;}
 .cardList{width: 33%;}
 .listItem{height: 120rpx;text-align: center;}
-.circle-icon{width: 50rpx;height: 50rpx;border-radius: 50%;margin: 20rpx auto 0 auto}
+.circle-icon{width: 60rpx;height: 60rpx;border-radius: 50%;margin: 20rpx auto 0 auto;line-height: 60rpx;text-align: center;
+ }
 .listItem>text{font-size: 26rpx;}
 
 
 
 
-/*account*/
-
-.myAccount{border: none}
-.accountValue{font-size: 20rpx;color: #555}
-
+/*healthy*/
+/* .icon-wenjian{font-size: 56rpx;color:#938FD3 }
+.icon-buoumaotubiao37{font-size: 56rpx;color:#938FD3 } */
+.health-file{background: #938FD3}
+.medical-report{background: #CCA887}
 
 /*services*/
 .physical-examination{background:#E7BC4E }
 .reservation{background:#938FD3 }
 .callDoctor{background:#CCA887}
 .register-h{background:#B7C57A }
+
+.icon-tingzhenqi,.icon-yuyueguahao,.icon-yisheng,.icon-wenti,.icon-haoyou,.icon-icon-test,
+.icon-wenjian,.icon-buoumaotubiao37{color: #fff;font-size:40rpx;}
 
 /*other*/
 .invitingFrends{background:#938FD3 }
