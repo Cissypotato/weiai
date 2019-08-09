@@ -1,7 +1,4 @@
 page{padding-bottom: 32rpx;}
-
-.yellow{color: #EFC518;font-size: 42rpx;}
-
 /* 首页banner图 查询 zp */
 .banner{width: 100%;height: 320rpx;position: relative;}
 .banner>.query{background-color: #fff;height: 90rpx;position: absolute;top: 10px;left: 10px;right: 10px;z-index: 1;}
