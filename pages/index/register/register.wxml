@@ -1,0 +1,19 @@
+<view class='padding-lr'>
+   <view class="rec">
+      <block wx:for="{{3}}" wx:key>
+         <view class="doctor flex align-center">
+            <view>
+               <image src='/image/doctor.png'></image>
+            </view>
+            <view>
+               <view>
+                  <text class="text-xl">刘光明</text>
+                  <text class="padding-lr text-gray text-sm">中医师</text>
+               </view>
+               <view class="text-gray text-sm text-content">中医全科/皮肤</view>
+               <view class="text-gray text-cut text-sm desc">擅长皮肤病、眼科疾病、妇科疾病等科疾病</view>
+            </view>
+         </view>
+      </block>
+   </view>
+</view>

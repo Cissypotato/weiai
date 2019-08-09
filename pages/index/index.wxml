@@ -9,18 +9,18 @@
 <view class="padding-lr">
 
    <view class='nav flex justify-between align-center'>
-      <view>
+      <navigator hover-class="none" url="/pages/index/register/register">
          <icon class="iconfont icon-yuyueguahao"></icon>
          <view>预约问诊</view>
-      </view>
-       <view>
+      </navigator>
+       <navigator hover-class="none" url="/pages/index/test/test">
          <icon class="iconfont icon-buoumaotubiao37"></icon>
          <view>体检套餐</view>
-      </view>
-       <view>
+      </navigator>
+       <navigator hover-class="none">
          <icon class="iconfont icon-icon-test"></icon>
          <view>咨询医师</view>
-      </view>
+      </navigator>
    </view>
 
    <view class="tag flex justify-between align-center ">
