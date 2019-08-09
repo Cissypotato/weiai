@@ -1,23 +1,34 @@
 <!--pages/personal/personal.wxml-->
 <view class="wrapper">
 
-  <view class="header">
+  <view class="header" wx:if-else>
 
     <view class="logOut">
 
       <view class="avatarWrapper">
-        <view class="avatar">
-         <span class="iconfont icon-geren"></span>
+        <view class="avatar" bindtap="getLogin">
+          <open-data type="userAvatarUrl"></open-data>
+          <!-- <span class="iconfont icon-geren"></span> -->
         </view>
         <text>未登录</text>
       </view>
-      <view class="loginRight"> 立即登录查看您的健康档案</view>
+      <view class="loginRight" bindtap="getLogin"> 立即登录查看您的健康档案</view>
     </view>
 
-    
-    <view class="login">
-    
-    
+
+    <view class="login" wx:if="{{loginif}}">
+
+      <view class="avatarWrapper">
+        <view class="avatar">
+          <block >
+          <open-data></open-data>
+            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+          </block>
+        </view>
+      </view>
+      <view class="loginRight" bindtap="getLogin"> 立即登录查看您的健康档案</view>
+
     </view>
 
   </view>
@@ -26,16 +37,16 @@
 
 
 
- 
+
 
   <view class="card healthy">
     <view class="cardTitle">
       我的健康
     </view>
     <view class="cardListWrapper">
-     
+
       <view class="cardList">
-        <view class="listItem">
+        <view class="listItem" bindtap="getHealthyRecord">
           <view class="circle-icon health-file ">
             <span class="iconfont icon-wenjian"></span>
           </view>
@@ -45,7 +56,7 @@
       <view class="cardList">
         <view class="listItem">
           <view class="circle-icon medical-report">
-             <span class="iconfont icon-buoumaotubiao37"></span>
+            <span class="iconfont icon-buoumaotubiao37"></span>
           </view>
           <text>体检报告</text>
         </view>
@@ -54,7 +65,7 @@
 
   </view>
 
-  
+
 
   <view class="card service">
     <view class="cardTitle">
@@ -86,7 +97,7 @@
           <text>电话医生</text>
         </view>
       </view>
-       <view class="cardList">
+      <view class="cardList">
         <view class="listItem">
           <view class="circle-icon register-h">
             <span class="iconfont icon-yuyueguahao"></span>
