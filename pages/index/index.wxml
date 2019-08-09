@@ -23,17 +23,6 @@
       </view>
    </view>
 
-   <view class="flex justify-between align-center margin-bottom">
-      <view>
-         <icon class="iconfont icon-people_fill yellow"></icon>
-         <text class="padding-lr">就诊人管理</text>
-      </view>
-      <view>
-         <text class="padding-lr">1</text>
-         <icon class="iconfont icon-xuanzeqixiayige_o"></icon>
-      </view>
-   </view>
-
    <view class="tag flex justify-between align-center ">
       <view class="text-xl">体检特辑</view>
    </view>
