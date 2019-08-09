@@ -1,0 +1,16 @@
+<!--pages/login/login.wxml-->
+<view class="loginWrapper">
+
+
+
+
+
+  <view class="buttonWrapper">
+      <button hover-class="button-hover" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">
+        微信登录
+      </button>
+  </view>
+
+
+
+</view>
