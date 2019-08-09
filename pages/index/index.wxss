@@ -1,0 +1,36 @@
+page{padding-bottom: 32rpx;}
+
+.yellow{color: #EFC518;font-size: 42rpx;}
+
+/* 首页banner图 查询 zp */
+.banner{width: 100%;height: 320rpx;position: relative;}
+.banner>.query{background-color: #fff;height: 90rpx;position: absolute;top: 10px;left: 10px;right: 10px;z-index: 1;}
+.banner>.query>view:nth-child(1){width: 80%;padding:10rpx 0rpx 10rpx 10rpx;}
+.banner>.query>view:nth-child(1)>input{height: 100%;position: relative}
+.banner>.query>view:nth-child(1)>input::after{position: absolute;content: '';top: 0;bottom: 0;right: 0;border-right: 1px solid #eee;}
+.banner>.query>view:nth-child(2){width: 20%;text-align: center;line-height: 90rpx;}
+.banner>.query>view:nth-child(2)>icon{font-size: 50rpx;}
+.banner>image{display: block;width: 100%;}
+
+/* 首页快速导航 zp */
+.nav>view{border-radius: 6rpx;margin: 32rpx 0;width: 32%;text-align: center;color: #fff;padding: 32rpx 0;}
+.nav>view>icon{font-size: 50rpx;}
+.nav>view>view{line-height: 64rpx;}
+.nav>view:nth-child(1){background: linear-gradient(45deg,#46D445,#AEE33C);}
+.nav>view:nth-child(2){background: linear-gradient(45deg,#17C5DB,#45F0C9);}
+.nav>view:nth-child(3){background: linear-gradient(45deg,#A499FA,#90C4FF);}
+
+/* 体检特辑 zp */
+.spe{flex-wrap: wrap;margin-bottom: 32rpx;}
+.spe>view{width: 48%;}
+.spe>view:nth-child(odd){margin-right: 4%;}
+.spe>view>image{width: 100%;}
+
+/* 问诊医师 zp*/
+.tag{margin-bottom:32rpx;}
+.rec{overflow: hidden;}
+.doctor{width: 100%;margin-bottom: 20rpx;}
+.doctor>view:nth-child(1)>image{width:200rpx;height: 200rpx;border-radius: 6rpx;}
+.doctor>view:nth-child(2){padding: 20rpx 0 20rpx 20rpx;}
+.doctor>view:nth-child(2)>.desc{width: 90%;}
+

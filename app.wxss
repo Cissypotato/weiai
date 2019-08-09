@@ -1,22 +1,19 @@
-/**app.wxss**/
-
 @import "./utils/iconfont.wxss";
 
 
-
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
-
-
-
-
-
+/*公用CSS zp */
+.padding-lr{padding:0 20rpx;}
+.flex{display: flex;}
+.justify-between{justify-content: space-between}
+.align-center{align-content: center;}
+.text-sm {font-size: 24rpx;}
+.text-sm {font-size: 28rpx;}
+.text-lg{font-size: 32rpx;}
+.text-xl {font-size: 36rpx;font-weight: bold;}
+.text-cut {text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.radius{border-radius: 6rpx;}
+.text-gray{color: #aaa;}
+.text-content{line-height: 64rpx;}
+.margin-bottom{margin-bottom: 32rpx;}
 
 

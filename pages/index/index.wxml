@@ -1,0 +1,66 @@
+<view class="banner">
+   <view class="query flex align-center radius">
+      <view class="padding-lr"><input name="query" value="" placeholder="查找医生"></input></view>
+      <view><icon class="iconfont icon-sousuo"></icon></view>
+   </view>
+   <image mode="widthFix" src="/image/banner.png"></image>
+</view>
+
+<view class="padding-lr">
+
+   <view class='nav flex justify-between align-center'>
+      <view>
+         <icon class="iconfont icon-yuyueguahao"></icon>
+         <view>预约问诊</view>
+      </view>
+       <view>
+         <icon class="iconfont icon-buoumaotubiao37"></icon>
+         <view>体检套餐</view>
+      </view>
+       <view>
+         <icon class="iconfont icon-icon-test"></icon>
+         <view>咨询医师</view>
+      </view>
+   </view>
+
+   <view class="flex justify-between align-center margin-bottom">
+      <view>
+         <icon class="iconfont icon-people_fill yellow"></icon>
+         <text class="padding-lr">就诊人管理</text>
+      </view>
+      <view>
+         <text class="padding-lr">1</text>
+         <icon class="iconfont icon-xuanzeqixiayige_o"></icon>
+      </view>
+   </view>
+
+   <view class="tag flex justify-between align-center ">
+      <view class="text-xl">体检特辑</view>
+   </view>
+   <view class="spe flex">
+      <block wx:for="{{4}}" wx:key>
+         <view><image mode="widthFix" src="/image/tj_{{index+1}}.png"></image></view>
+      </block>
+   </view>
+
+   <view class="tag flex justify-between align-center ">
+      <view class="text-xl">问诊医师</view>
+      <view>查看更多<icon class="iconfont icon-xuanzeqixiayige_o"></icon></view>
+   </view>
+   <view class="rec">
+      <block wx:for="{{3}}" wx:key>
+         <view class="doctor flex align-center">
+            <view>
+               <image src='/image/doctor.png'></image>
+            </view>
+            <view>
+               <view><text class="text-xl">刘光明</text><text class="padding-lr text-gray text-sm">中医师</text></view>
+               <view class="text-gray text-sm text-content">中医全科/皮肤</view>
+               <view class="text-gray text-cut text-sm desc">擅长皮肤病、眼科疾病、妇科疾病等科疾病</view>
+            </view>
+         </view>
+      </block>
+   </view>
+</view>
+
+
