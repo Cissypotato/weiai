@@ -1,6 +1,6 @@
 /* pages/personal/personal.wxss */
 
-page{background: #f8f8f8}
+page{background: #fff}
 
 .header{height: 320rpx;background: #fff;}
 
@@ -14,7 +14,7 @@ open-data{width: 120rpx;height: 120rpx;border-radius: 50%;}
   border-top-left-radius:20rpx;border-top-right-radius:20rpx;}
 
 
-
+.card-wrapper{background: #f8f8f8;}
 .card{background: #fff;padding: 0 20rpx 20rpx 20rpx;margin-bottom: 20rpx;}
 .cardTitle{border-bottom: 1px solid #eee;line-height: 2.6em;}
 .cardListWrapper{display: flex;width: 100%;margin-top: 20rpx;flex-wrap: wrap;}
@@ -43,6 +43,7 @@ open-data{width: 120rpx;height: 120rpx;border-radius: 50%;}
 .icon-wenjian,.icon-buoumaotubiao37{color: #fff;font-size:48rpx;}
 
 /*other*/
+
 .invitingFrends{background:#938FD3 }
 .help{background:#b5c46c }
 .customerService{background:#F29C4B }

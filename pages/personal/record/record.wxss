@@ -1,6 +1,6 @@
 /* pages/personal/record/record.wxss */
 
-
+page{height: 100%;}
 .wrapper{border:1px solid #eee;margin: 20rpx;padding: 20rpx;}
  .title{height: 90rpx;text-align: center;font-size: 48rpx;color: #b7c57a;line-height: 80rpx;border-bottom: 1px solid #eee}
 
@@ -12,3 +12,18 @@
 .item{width: 50%;height: 50rpx;line-height: 50rpx;font-size: 30rpx;padding: 40rpx;box-sizing: border-box;}
 
 .health-info{margin-top: 80rpx;}
+
+
+
+form{padding: 40rpx;height: 100%;box-sizing: border-box}
+
+.form-title{text-align: center;line-height: 2em;color:#938FD3 ;font-size: 38rpx;}
+
+.section-wrapper{border: 1px solid #eee;margin: 40rpx;padding-top: 40rpx;padding-bottom: 40rpx;}
+.section{display: flex;padding: 20rpx;justify-content: center;color: #555}
+.section>input{border-bottom: 1px solid #eee}
+
+.btn-area{display: flex;margin-top: 40rpx;justify-content: center}
+.btn-area>button{width: 140rpx;line-height: 1.6em;background:#938FD3;color: #fff;font-size: 32rpx; }
+
+.reset{margin-left: -160rpx;}

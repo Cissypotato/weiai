@@ -28,6 +28,21 @@ Page({
     })
 
   },
+  toMyphysical:function(){
+    wx.navigateTo({
+      url: "./myphysical/myphysical"
+    })
+  },
+  toMyrecord: function () {
+    wx.navigateTo({
+      url: "./myrecord/myrecord"
+    })
+  },
+  tel:function(){
+    wx.makePhoneCall({
+      phoneNumber: '158XXXXXXXX',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

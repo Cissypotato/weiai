@@ -1,0 +1,21 @@
+/* pages/personal/myrecord/record.wxss */
+
+
+.wrapper{padding: 20rpx;}
+
+
+.reservation{margin-bottom: 40rpx;}
+.title{line-height: 2rem;color: #E7BC4E;padding-left: 40rpx;border-bottom: 1px solid #CCA887 }
+
+
+.card{border-bottom:1px solid #eee;margin-bottom: 20rpx;padding-bottom: 20rpx;
+}
+.card-header{display: flex;padding: 40rpx;}
+.avatar{width: 160rpx;height: 160rpx;border-radius: 50%;}
+.card-header-content{padding-left: 20rpx;display: flex;flex-direction: column;justify-content: center;}
+.skill{font-size:28rpx;color: #555; }
+
+.card-content{padding: 0 40rpx 0 40rpx;line-height: 2em}
+.item>text{font-size:28rpx;color: #555;}
+
+
