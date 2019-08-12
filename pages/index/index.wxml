@@ -22,7 +22,7 @@
          <view>咨询医师</view>
       </navigator>
    </view>
-
+   <!-- 
    <view class="tag flex justify-between align-center ">
       <view class="text-xl">体检特辑</view>
    </view>
@@ -30,10 +30,10 @@
       <block wx:for="{{4}}" wx:key>
          <view><image mode="widthFix" src="/image/tj_{{index+1}}.png"></image></view>
       </block>
-   </view>
+   </view> -->
 
    <view class="tag flex justify-between align-center ">
-      <view class="text-xl">问诊医师</view>
+      <view class="text-xl">推荐医师</view>
       <view>查看更多<icon class="iconfont icon-xuanzeqixiayige_o"></icon></view>
    </view>
    <view class="rec">
@@ -47,6 +47,10 @@
                <view class="text-gray text-sm text-content">中医全科/皮肤</view>
                <view class="text-gray text-cut text-sm desc">擅长皮肤病、眼科疾病、妇科疾病等科疾病</view>
             </view>
+         </view>
+         <view class='doc_pic flex justify-between align-center'>
+            <view>挂号费：<text class='text-red'>￥20</text></view>
+            <view><button class="text-sm lj_btn" bindtap="goMake">立即预约</button></view>
          </view>
       </block>
    </view>

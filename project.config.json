@@ -14,7 +14,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.0",
-	"appid": "wxd6ae83d124f69dde",
+	"appid": "wxdd878937e75e04eb",
 	"projectname": "miniprogram-2",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -40,12 +40,48 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
 					"name": "pages/index/register/register",
 					"pathName": "pages/index/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/register/register",
+					"pathName": "pages/index/register/register",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/index/registerDate/registerDate",
+					"pathName": "pages/index/registerDate/registerDate",
+					"query": "id=23",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/registerInfo/registerInfo",
+					"pathName": "pages/index/registerInfo/registerInfo",
+					"query": "id=23",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/registerInfo/registerInfo",
+					"pathName": "pages/index/registerInfo/registerInfo",
+					"query": "id=23",
 					"scene": null
 				}
 			]

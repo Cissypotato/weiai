@@ -1,0 +1,34 @@
+<view class="info_head padding-lr margin-bottom">
+   <view class="flex justify-between">
+      <view>就诊人</view>
+      <view class="zl">张某人</view>
+   </view>
+   <view class="flex justify-between">
+      <view>就诊电话</view>
+      <view class="zl">13541042346</view>
+   </view>
+</view>
+
+<view class="jz">
+   <view class="jz_head">就诊信息</view>
+   <view class="flex align-center">
+      <view class="jz_title text-gray">诊所</view>
+      <view class="jz_data">德瑞堂国医馆</view>
+   </view>
+   <view class="flex align-center">
+      <view class="jz_title text-gray">医生</view>
+      <view class="jz_data">刘光明</view>
+   </view>
+   <view class="flex align-center">
+      <view class="jz_title text-gray">就诊时间</view>
+      <view class="jz_data">2018/08/12周一下午</view>
+   </view>
+   <view class="flex align-center">
+      <view class="jz_title text-gray">挂号费</view>
+      <view class="jz_data">20.0</view>
+   </view>
+</view>
+
+<view class="next">
+   <button bindtap='next_tel' bindtap="zg_btn">确定支付</button>
+</view>

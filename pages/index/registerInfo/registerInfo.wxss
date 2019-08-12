@@ -1,0 +1,18 @@
+/* pages/index/registerInfo/registerInfo.wxss */
+page{background: #F2F5F5;}
+
+.info_head{background: #fff;}
+.info_head>view{line-height: 90rpx;}
+.info_head>view:nth-child(1){border-bottom: 1px solid #e4e4e4;}
+.info_head .zl{color: #75A8FF;}
+
+.jz{background: #fff;padding: 0 20rpx;}
+.jz>.jz_head{line-height: 90rpx;border-bottom: 1px solid #e4e4e4;}
+.jz>view{line-height: 60rpx;}
+.jz>view>.jz_title{width: 26%;}
+.jz>view>.jz_data{width: 74%;}
+
+/* 按钮 zp*/
+.next{opacity:1;border-radius:6px;position: fixed;left: 20rpx;right:20rpx;bottom:40rpx;}
+.next>button{background:#70A5FF;color: #fff;}
+

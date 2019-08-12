@@ -14,6 +14,10 @@
                <view class="text-gray text-cut text-sm desc">擅长皮肤病、眼科疾病、妇科疾病等科疾病</view>
             </view>
          </view>
+         <view class='doc_pic flex justify-between align-center'>
+            <view>挂号费：<text class='text-red'>￥20</text></view>
+            <view><button class="text-sm lj_btn" bindtap="goMake">立即预约</button></view>
+         </view>
       </block>
    </view>
 </view>

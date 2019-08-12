@@ -5,6 +5,8 @@
       "pages/index/index",
       "pages/index/test/test",
       "pages/index/register/register",
+      "pages/index/registerDate/registerDate",
+      "pages/index/registerInfo/registerInfo",
       "pages/logs/logs",
       "pages/personal/record/record"
    ],
