@@ -1,0 +1,46 @@
+<view class='tips'>请选择预约时间</view>
+<view class="week">
+   <view class="week_box flex">
+      <block wx:for="{{weekInfo}}" wx:key>
+         <view class="week_item">
+            <view>8月12日</view>
+            <view>星期一</view>
+         </view>
+      </block>
+   </view>
+</view>
+<view class='tips'>请选择预约时段</view>
+<view class="week">
+   <view class="week_box flex">
+      <block wx:for="{{intervalInfo}}" wx:key>
+         <view class="week_item">
+            <view class="interval" wx:if="{{index == '0'}}">上午</view>
+            <view class="interval" wx:if="{{index == '1'}}">下午</view>
+            <view class="interval" wx:if="{{index == '2'}}">晚上</view>
+         </view>
+      </block>
+   </view>
+</view>
+<view class="next">
+   <button bindtap='next_tel' bindtap="zg_btn">确定</button>
+</view>
+
+<view class='zg' wx:if="{{isZg}}" bindtap="close_zg"></view>
+<view class='make_info' wx:if="{{isZg}}">
+   <view class="flex justify-between make_info_top">
+      <view></view>
+      <view class="title">预约信息</view>
+      <view class="close" bindtap="close_zg">取消</view>
+   </view>
+   <form bindsubmit="formSubmit">
+      <view class="flex make_form align-center">
+         <view>姓名</view>
+         <input name="uname" value="" placeholder="请输入"></input>
+      </view>
+       <view class="flex make_form align-center">
+         <view>手机号</view>
+         <input name="uname" value="" placeholder="请输入"></input>
+      </view>
+      <button form-type="submit">下一步</button>
+   </form>
+</view>

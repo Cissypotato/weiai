@@ -5,7 +5,7 @@
 .padding-lr{padding:0 20rpx;}
 .flex{display: flex;}
 .justify-between{justify-content: space-between}
-.align-center{align-content: center;}
+.align-center{align-items: center;}
 .text-sm {font-size: 24rpx;}
 .text-sm {font-size: 28rpx;}
 .text-lg{font-size: 32rpx;}
@@ -13,16 +13,19 @@
 .text-cut {text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
 .radius{border-radius: 6rpx;}
 .text-gray{color: #aaa;}
+.text-red{color: #e54d42;}
 .text-content{line-height: 64rpx;}
 .margin-bottom{margin-bottom: 32rpx;}
-
+.border-bottom{border-bottom: 1px solid #aaa;}
 
 /* 问诊医师 zp*/
 .tag{margin-bottom:32rpx;}
 .rec{overflow: hidden;}
-.doctor{width: 100%;margin-bottom: 20rpx;}
+.doctor{width: 100%;}
 .doctor>view:nth-child(1)>image{width:200rpx;height: 200rpx;border-radius: 6rpx;}
 .doctor>view:nth-child(2){padding: 20rpx 0 20rpx 20rpx;}
 .doctor>view:nth-child(2)>.desc{width: 90%;}
+.doc_pic{margin-bottom: 20rpx;padding-bottom: 20rpx;border-bottom:2rpx solid #f3f3f3;}
+.doc_pic .lj_btn{background:#70A5FF;color: #fff;}
 
 
