@@ -111,7 +111,7 @@
       </view>
     </view>
 
-
+<!-- 
     <view class="card other">
       <view class="cardTitle">
         其他
@@ -125,15 +125,15 @@
             <text>邀请好友</text>
           </view>
         </view>
-        <view class="cardList">
+        <!-- <view class="cardList">
           <view class="listItem">
             <view class="circle-icon help">
               <span class="iconfont icon-wenti"></span>
             </view>
             <text>帮助与反馈</text>
           </view>
-        </view>
-        <view class="cardList">
+        </view> -->
+        <!-- <view class="cardList">
           <view class="listItem">
             <view class="circle-icon customerService" bindtap="tel">
               <span class="iconfont icon-icon-test"></span>
@@ -142,7 +142,7 @@
           </view>
         </view>
       </view>
-    </view>
+    </view> --> 
 
   </view>
 </view>
