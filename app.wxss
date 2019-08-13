@@ -6,7 +6,7 @@
 .flex{display: flex;}
 .justify-between{justify-content: space-between}
 .align-center{align-items: center;}
-.text-sm {font-size: 24rpx;}
+.text-xs {font-size: 24rpx;}
 .text-sm {font-size: 28rpx;}
 .text-lg{font-size: 32rpx;}
 .text-xl {font-size: 36rpx;font-weight: bold;}
