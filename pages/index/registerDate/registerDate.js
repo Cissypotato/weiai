@@ -2,20 +2,21 @@ const app = getApp()
 Page({
    data: {
       isWeekId:0,
-      isIndex:0,
+      isIndex:'',
       weekInfo:{},
       intervalInfo:{},
       isZg:false
    },
    onLoad: function(options) {
-      this.week(23)
+     console.log(options)
+      this.week(options.id)
    },
    week: function(id) {
       let then = this
       wx: wx.request({
          url: app.globalData.appUrl + 'doctor/doctor_time',
          data: {
-            id: id
+            doctor_id: id
          },
          method: 'GET',
          success: function(res) {
@@ -55,9 +56,36 @@ Page({
       let myreg = /^(0|86|17951)?(13[0-9]|15[012356789]|16[6]|19[89]]|17[01345678]|18[0-9]|14[579])[0-9]{8}$/
       if (week_id != 0){
          if(myreg.test(tel)){
-           wx.navigateTo({
-              url: '/pages/index/registerInfo/registerInfo',
+           wx.request({
+             url:app.globalData.appUrl +'doctor/add_about',
+             data: {
+               "queue_id": week_id,
+               "uid":1,
+               "name":uname,
+               "tel":tel,
+             },
+             header: {},
+             method: 'POST',
+             dataType: 'json',
+             responseType: 'text',
+             success: function(res) {
+
+               console.log(res)
+             },
+             fail: function(res) {},
+             complete: function(res) {},
            })
+          //  https://jkxw.guaishe.com/index.php/index/doctor/add_about?queue_id=26&uid=1&name=李梦&tel=18202803577      
+           
+           
+           
+          //    添加预约   queue_id 排班id   uid=用户id  name = 就诊人  tel = 电话 
+
+          //  wx.navigateTo({
+          //     url: '/pages/index/registerInfo/registerInfo',
+          //  })
+
+
          }else{
             wx.showToast({
                title: '请输入正确的手机号码',

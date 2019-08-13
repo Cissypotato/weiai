@@ -7,6 +7,7 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
+    isLogin:false
   },
   getLogin:function(){
     wx.navigateTo({
@@ -28,9 +29,12 @@ Page({
     })
 
   },
-  toMyphysical:function(){
-    wx.navigateTo({
-      url: "./myphysical/myphysical"
+  showMyphysical:function(){
+    
+    wx.showToast({
+      title: '功能开发中，请期待',
+      icon: 'none',
+      duration: 2000
     })
   },
   toMyrecord: function () {

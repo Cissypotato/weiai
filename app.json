@@ -9,7 +9,6 @@
     "pages/index/registerInfo/registerInfo",
     "pages/logs/logs",
     "pages/personal/record/record",
-    "pages/personal/myphysical/myphysical",
     "pages/personal/myrecord/myrecord"
   ],
   "window": {

@@ -2,7 +2,7 @@
 <view class="week">
    <view class="week_box flex">
       <block wx:for="{{weekInfo}}" wx:key>
-         <view class="week_item {{isIndex==index?'bg-blue':''}} {{item.state?'text-blue':'text-gray'}}" data-index="{{index}}" bindtap="{{item.state?'choice_week':''}}">
+         <view class="week_item {{isIndex===index?'bg-blue':''}} {{item.state?'text-blue':'text-gray'}}" data-index="{{index}}" bindtap="{{item.state?'choice_week':''}}">
             <view>{{item.data}}</view>
             <view>{{item.week}}</view>
          </view>
@@ -13,7 +13,7 @@
 <view class="week">
    <view class="week_box flex">
       <block wx:for="{{intervalInfo}}" wx:key>
-         <view class="week_item {{item.Queue_Id==isWeekId?'bg-blue':''}} {{item.state?'text-blue':'text-gray'}}" data-id="{{item.Queue_Id}}" bindtap="choice_sd">
+         <view class="week_item {{item.id==isWeekId?'bg-blue':''}} {{item.state?'text-blue':'text-gray'}}" data-id="{{item.id}}" bindtap="choice_sd">
             <view class="interval" wx:if="{{index == '0'}}">上午</view>
             <view class="interval" wx:if="{{index == '1'}}">下午</view>
             <view class="interval" wx:if="{{index == '2'}}">晚上</view>

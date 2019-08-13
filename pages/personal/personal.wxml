@@ -86,7 +86,7 @@
         </view>
         <view class="cardList">
           <view class="listItem">
-            <view class="circle-icon physical-examination" bindtap="toMyphysical">
+            <view class="circle-icon physical-examination" bindtap="showMyphysical">
               <span class="iconfont icon-tingzhenqi"></span>
             </view>
             <text>我的体检</text>

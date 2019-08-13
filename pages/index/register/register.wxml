@@ -1,22 +1,22 @@
 <view class='padding-lr'>
    <view class="rec">
-      <block wx:for="{{3}}" wx:key>
+      <block wx:for="{{doctorList}}" wx:key>
           <view class="doctor doc_pic flex align-center">
             <view>
-               <image src='/image/doctor.png'></image>
+               <image src="{{item.doctor_img}}"></image>
             </view>
             <view>
                <view>
-                  <text class="text-xl">刘光明</text>
-                  <text class="padding-lr text-gray text-sm">中医师</text>
+                  <text class="text-xl">{{item.doctor_name}}</text>
+                  <text class="padding-lr text-gray text-sm">{{item.doctor_title}}</text>
                </view>
-               <view class="text-gray text-cut text-sm desc">擅长皮肤病、眼科疾病、妇科疾病等科疾病</view>
+               <view class="text-gray text-cut text-sm desc">{{item.doctor_good}}</view>
                <view class=' flex justify-between align-center'>
                   <view>挂号费：
                      <text class='text-red'>￥20</text>
                   </view>
                   <view>
-                     <button class="text-sm lj_btn" bindtap="goMake">立即预约</button>
+                     <button class="text-sm lj_btn" bindtap="goMake" data-id="{{item.doctor_id}}">立即预约</button>
                   </view>
                </view>
             </view>

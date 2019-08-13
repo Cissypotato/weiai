@@ -5,17 +5,20 @@
 
 
 .reservation{margin-bottom: 40rpx;}
-.title{line-height: 2rem;color: #E7BC4E;padding-left: 40rpx;border-bottom: 1px solid #CCA887 }
+.title{line-height: 2rem;color: #E7BC4E;padding-left: 40rpx;text-align: center;}
 
+
+.reservation-card{border: 1px solid #ccc;box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);margin-top: 20rpx;}
 
 .card{border-bottom:1px solid #eee;margin-bottom: 20rpx;padding-bottom: 20rpx;
 }
 .card-header{display: flex;padding: 40rpx;}
 .avatar{width: 160rpx;height: 160rpx;border-radius: 50%;}
 .card-header-content{padding-left: 20rpx;display: flex;flex-direction: column;justify-content: center;}
-.skill{font-size:28rpx;color: #555; }
+.skill{font-size:30rpx;color: #555; }
 
 .card-content{padding: 0 40rpx 0 40rpx;line-height: 2em}
-.item>text{font-size:28rpx;color: #555;}
+.item>text{font-size:30rpx;color: #555;}
 
 
+/* border-bottom: 1px solid sandybrown} */
