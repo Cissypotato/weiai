@@ -13,9 +13,6 @@
 .next{padding: 0 20rpx;opacity:1;border-radius:6px;margin-top: 20rpx;}
 .next>button{background:#70A5FF;color: #fff;}
 
-
-/* 弹出层 */
-.zg{position: fixed;bottom: 0;top: 0;left: 0;right: 0;background: rgba(0, 0, 0, 0.4);z-index: 1}
 .make_info{position: fixed;bottom: 0;top: 40%;left: 0;right: 0;background: #fff;z-index: 2;border-radius: 20rpx;padding:0 20rpx;}
 .make_info>.make_info_top{line-height: 90rpx;}
 .make_info>.make_info_top>.title{line-height: 90rpx;font-size: 36rpx;}
@@ -25,3 +22,4 @@
 .make_info .make_form>input{width: 80%;}
 .make_info button{position: absolute;bottom: 40rpx;left: 20rpx;right: 20rpx;background: #F2F5F5;color: #6CA2FE;border:none;}
 .make_info button::after{border: none;}
+

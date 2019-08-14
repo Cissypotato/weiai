@@ -10,7 +10,9 @@
 .text-sm {font-size: 28rpx;}
 .text-lg{font-size: 32rpx;}
 .text-xl {font-size: 36rpx;font-weight: bold;}
+.text-xxl {font-size: 40rpx;}
 .text-cut {text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+.text-bold{font-weight: bold;}
 .radius{border-radius: 6rpx;}
 .text-blue{color: #7EAEFE;}
 .text-gray{color: #aaa;}
@@ -18,7 +20,7 @@
 .bg-blue{background:#7EAEFE;color: #fff !important;}
 .text-content{line-height: 64rpx;}
 .margin-bottom{margin-bottom: 32rpx;}
-.border-bottom{border-bottom: 1px solid #aaa;}
+.border-bottom{border-bottom: 1px solid #e4e4e4;}
 
 /* 问诊医师 zp*/
 .tag{margin-bottom:32rpx;}
@@ -29,5 +31,10 @@
 .doctor>view:nth-child(2)>.desc{width: 90%; line-height: 60rpx;}
 .doc_pic{margin-bottom: 20rpx;padding-bottom: 20rpx;border-bottom:2rpx solid #f3f3f3;}
 .doc_pic .lj_btn{background:#70A5FF;color: #fff;}
+
+
+/* 弹出层zg zp*/
+.zg{position: fixed;bottom: 0;top: 0;left: 0;right: 0;background: rgba(0, 0, 0, 0.4);z-index: 1}
+
 
 
