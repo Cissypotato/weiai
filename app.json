@@ -9,7 +9,9 @@
     "pages/index/registerInfo/registerInfo",
     "pages/logs/logs",
     "pages/personal/record/record",
-    "pages/personal/myrecord/myrecord"
+    "pages/personal/myrecord/myrecord",
+    "pages/personal/address/address",
+    "pages/personal/address/addAddress/addAddress"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,23 @@
+/* pages/personal/address/address.wxss */
+
+page{background: #f8f8f8;height: 100%;box-sizing: border-box;}
+
+.main{height:100%;position: relative;overflow: hidden;}
+
+.card{background: #fff;margin-top: 20rpx;padding: 40rpx;line-height: 1.8em; }
+
+.card-content{border-bottom:1px solid #f8f8f8;}
+.content-left{display: flex;justify-content: space-between}
+.default-selected{font-size: 24rpx;background: #b5c46c;color: #fff;border-radius: 4px;padding: 4rpx;margin-left: 20rpx;}
+.icon-xuanze,.icon-choose{font-size: 40rpx;color:#b5c46c; }
+
+
+.tel{font-size: 28rpx;margin-left: 20rpx;}
+.address{font-size: 28rpx;color: #555;}
+.card-button{display: flex;justify-content: space-between;margin-top: 20rpx;line-height: 2em;font-size: 28rpx;color: #555}
+
+.icon-iconfontzhizuobiaozhunbduan10,.icon-dustbin_icon{font-size: 24rpx;color: #555;margin-right: 10rpx;}
+
+.button{position: absolute;bottom: 0;width: 100%;padding: 40rpx;box-sizing: border-box;}
+.button>button{background: #b5c46c;color: #fff;}
+

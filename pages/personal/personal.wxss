@@ -40,7 +40,8 @@ open-data{width: 120rpx;height: 120rpx;border-radius: 50%;}
 .register-h{background:#B7C57A }
 
 .icon-tingzhenqi,.icon-yuyueguahao,.icon-yisheng,.icon-wenti,.icon-haoyou,.icon-icon-test,
-.icon-wenjian,.icon-buoumaotubiao37{color: #fff;font-size:48rpx;}
+.icon-wenjian,.icon-buoumaotubiao37,.icon-quanbudingdan01,
+.icon-map,.icon-wodedingdan2{color: #fff;font-size:48rpx;}
 
 /*other*/
 

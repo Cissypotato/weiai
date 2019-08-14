@@ -92,14 +92,22 @@
             <text>我的体检</text>
           </view>
         </view>
-        <!-- <view class="cardList">
+        <view class="cardList">
         <view class="listItem">
           <view class="circle-icon callDoctor">
-            <span class="iconfont icon-xxx"></span>
+            <span class="iconfont icon-wodedingdan2"></span>
           </view>
-          <text>电话医生</text>
+          <text>我的订单</text>
         </view>
-      </view> -->
+      </view>
+       <view class="cardList">
+          <view class="listItem">
+            <view class="circle-icon register-h" bindtap="toAdrress">
+              <span class="iconfont icon-map"></span>
+            </view>
+            <text>我的地址</text>
+          </view>
+        </view>
         <!-- <view class="cardList">
         <view class="listItem">
           <view class="circle-icon register-h">
@@ -111,7 +119,50 @@
       </view>
     </view>
 
-<!-- 
+    <!-- <view class="card order">
+      <view class="cardTitle">
+        我的订单
+      </view>
+      <view class="cardListWrapper">
+
+        <view class="cardList">
+          <view class="listItem">
+            <view class="circle-icon reservation" bindtap="toMyrecord">
+              <span class="iconfont icon-quanbudingdan01"></span>
+            </view>
+            <text>全部订单</text>
+          </view>
+        </view>
+        <view class="cardList">
+          <view class="listItem">
+            <view class="circle-icon physical-examination" bindtap="showMyphysical">
+              <span class="iconfont icon-daifukuan"></span>
+            </view>
+            <text>待付款</text>
+          </view>
+        </view>
+        <view class="cardList">
+          <view class="listItem">
+            <view class="circle-icon callDoctor">
+              <span class="iconfont icon-daifahuo"></span>
+            </view>
+            <text>待发货</text>
+          </view>
+        </view>
+        <view class="cardList">
+          <view class="listItem">
+            <view class="circle-icon register-h">
+              <span class="iconfont icon-daishouhuo1"></span>
+            </view>
+            <text>待收货</text>
+          </view>
+        </view>
+       
+        
+      </view>
+    </view> -->
+
+    <!-- 
     <view class="card other">
       <view class="cardTitle">
         其他
@@ -133,7 +184,7 @@
             <text>帮助与反馈</text>
           </view>
         </view> -->
-        <!-- <view class="cardList">
+    <!-- <view class="cardList">
           <view class="listItem">
             <view class="circle-icon customerService" bindtap="tel">
               <span class="iconfont icon-icon-test"></span>
@@ -142,7 +193,7 @@
           </view>
         </view>
       </view>
-    </view> --> 
+    </view> -->
 
   </view>
 </view>
