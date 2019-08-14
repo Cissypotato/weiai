@@ -40,7 +40,11 @@
 			"list": []
 		},
 		"miniprogram": {
+<<<<<<< HEAD
 			"current": 7,
+=======
+			"current": 9,
+>>>>>>> 8245e82c810668f480792dfa637883edcd6f22a3
 			"list": [
 				{
 					"id": -1,
@@ -86,15 +90,39 @@
 				},
 				{
 					"id": -1,
+<<<<<<< HEAD
 					"name": "address",
 					"pathName": "pages/personal/address/address",
+=======
+					"name": "pages/index/test/test",
+					"pathName": "pages/index/test/test",
+>>>>>>> 8245e82c810668f480792dfa637883edcd6f22a3
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
+<<<<<<< HEAD
 					"name": "addAddress",
 					"pathName": "pages/personal/address/addAddress/addAddress",
+=======
+					"name": "pages/index/drug/drug",
+					"pathName": "pages/index/drug/drug",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/drug/drug",
+					"pathName": "pages/index/drug/drug",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/orderConfirm/orderConfirm",
+					"pathName": "pages/index/orderConfirm/orderConfirm",
+>>>>>>> 8245e82c810668f480792dfa637883edcd6f22a3
 					"scene": null
 				}
 			]

@@ -1,0 +1,55 @@
+<view class="drug">
+   <view class="drug_img">
+      <image src="/image/drug.png" mode="aspectFill"></image>
+   </view>
+   <view class="drug_info">
+      <view class="text-red">￥
+         <text class="text-xxl text-bold">11.9</text>
+      </view>
+      <view class="text-content text-xl text-bold">百多邦 莫匹多星软膏 168ml</view>
+      <view class="text-sm text-gray">本商品由德瑞堂医药自营提供</view>
+      <view class="text-sm text-gray">批准文号：国药准字Z34020605</view>
+   </view>
+</view>
+<view class="drug_xq">
+   <view class="flex">
+      <view class="{{isIndex == 0 ?'xq_cur':''}}" data-index="0" bindtap="tabQh">图文详情</view>
+      <view class="{{isIndex == 1 ?'xq_cur':''}}" data-index="1" bindtap="tabQh">规格参数</view>
+   </view>
+</view>
+
+<view class="show_xq">
+   <view wx:if="{{isIndex==0}}">1</view>
+   <view wx:else class="text-sm text-gray">
+      <view class=" flex align-center">
+         <text class="tit">商品名称</text>：独一味 什么什么无为片 0.25g*50片</view>
+      <view class=" flex align-center">
+         <text class="tit">品牌</text>：独一味</view>
+      <view class=" flex align-center">
+         <text class="tit">规格</text>：6g*10袋</view>
+      <view class=" flex align-center">
+         <text class="tit">重量</text>：0.081kg</view>
+      <view class=" flex align-center">
+         <text class="tit">生产厂商</text>：神威药业集团有限公司</view>
+      <view class=" flex align-center">
+         <text class="tit">批注文号</text>：国药准字Z34020605</view>
+   </view>
+</view>
+
+<view class="foot">
+   <button class="bg-blue" bindtap="zg_btn">立即购买</button>
+</view>
+
+
+<view class='zg' wx:if="{{isZg}}" bindtap="close_zg"></view>
+<view class="drug_number" wx:if="{{isZg}}">
+   <view class="flex justify-between align-center">
+      <view>数量</view>
+      <view class='flex write align-center'>
+         <icon class='iconfont icon-jia' bindtap="jiaNumber"></icon>
+         <input class="num" name="numer" value="{{number}}" form-type="number" bindinput="drugNumber"></input>
+         <icon class='iconfont icon-jian' bindtap="jianNumber"></icon>
+      </view>
+   </view>
+   <button class="bg-blue" bindtap="orderConfirm">下一步</button>
+</view>

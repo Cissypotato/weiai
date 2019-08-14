@@ -7,6 +7,8 @@
     "pages/index/register/register",
     "pages/index/registerDate/registerDate",
     "pages/index/registerInfo/registerInfo",
+    "pages/index/drug/drug",
+    "pages/index/orderConfirm/orderConfirm",
     "pages/logs/logs",
     "pages/personal/record/record",
     "pages/personal/myrecord/myrecord",

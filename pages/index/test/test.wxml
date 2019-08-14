@@ -15,7 +15,7 @@
 
 <view class="scroll">
    <block wx:for="{{10}}" wx:key>
-      <view class="flex drug">
+      <navigator hover-class="none" open-type="navigate" url="/pages/index/drug/drug" class="flex drug">
          <view>
             <image src="/image/drug.png" mode="widthFix"></image>
          </view>
@@ -23,6 +23,6 @@
             <view class="text-cut">白云山 什么什么乳膏</view>
             <view class="text-red">￥4.0</view>
          </view>
-      </view>
+      </navigator>
    </block>
 </view>
