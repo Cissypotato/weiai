@@ -86,36 +86,16 @@
 				},
 				{
 					"id": -1,
-					"name": "pages/index/test/test",
-					"pathName": "pages/index/test/test",
+					"name": "address",
+					"pathName": "pages/personal/address/address",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "pages/index/drug/drug",
-					"pathName": "pages/index/drug/drug",
+					"name": "addAddress",
+					"pathName": "pages/personal/address/addAddress/addAddress",
 					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/index/drug/drug",
-					"pathName": "pages/index/drug/drug",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/index/orderConfirm/orderConfirm",
-					"pathName": "pages/index/orderConfirm/orderConfirm",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "pages/index/orderDetail/orderDetail",
-					"pathName": "pages/index/orderDetail/orderDetail",
 					"scene": null
 				}
 			]

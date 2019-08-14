@@ -47,6 +47,11 @@ Page({
       phoneNumber: '158XXXXXXXX',
     })
   },
+  toAdrress(){
+    wx.navigateTo({
+      url: "./address/address"
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
