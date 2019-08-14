@@ -23,3 +23,9 @@ page{padding-bottom: 32rpx;}
 .spe>view:nth-child(odd){margin-right: 4%;}
 .spe>view>image{width: 100%;}
 
+.drug{background: #f5f5f5;flex-wrap: wrap;border-top: 1px solid #e4e4e4;margin-top: 20rpx;padding-top: 20rpx;}
+.drug .drug_item{width:48%;background: #fff;margin-bottom: 20rpx;border-radius: 6rpx;overflow:hidden;}
+.drug .drug_item:nth-child(2n){margin-left: 4%;}
+.drug .drug_item>.img{width: 100%;}
+.drug .drug_item>.img>image{width: 100%;}
+

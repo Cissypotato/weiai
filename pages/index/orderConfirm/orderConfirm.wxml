@@ -50,7 +50,7 @@
       <view class="text-sm text-gay">￥15.5</view>
    </view>
    <view class="flex justify-between border-bottom">
-      <view class='text-bold text-sm'>总运费</view>
+      <view class='text-bold text-sm'>配送费</view>
       <view class="text-sm text-gay">￥10</view>
    </view>
 </view>

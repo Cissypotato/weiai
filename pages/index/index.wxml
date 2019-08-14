@@ -19,7 +19,7 @@
       </navigator>
       <navigator hover-class="none" url="/pages/index/test/test">
          <icon class="iconfont icon-buoumaotubiao37"></icon>
-         <view>推荐好药</view>
+         <view>健康药品</view>
       </navigator>
       <navigator hover-class="none">
          <icon class="iconfont icon-icon-test"></icon>
@@ -67,4 +67,23 @@
 
       </block>
    </view>
+</view>
+
+
+<view class="tag flex justify-between align-center padding-lr">
+   <view class="text-xl">推荐好药</view>
+   <view>查看更多
+      <icon class="iconfont icon-xuanzeqixiayige_o"></icon>
+   </view>
+</view>
+<view class="drug padding-lr flex">
+   <block wx:for="{{10}}" wx:key>
+      <view class="drug_item">
+         <view class="img">
+            <image src="/image/drug.png" mode="widthFix"></image>
+         </view>
+         <view class="text-cut text-content padding-lr">三九维泰感冒灵颗粒</view>
+         <view class="text-red text-content padding-lr">￥10.9</view>
+      </view>
+   </block>
 </view>

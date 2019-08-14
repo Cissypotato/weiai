@@ -1,0 +1,69 @@
+<view class="bg-blue text-sm order_state">订单状态：代付款</view>
+<view class="order_site">
+   <view class="yes_site">
+      <view class="text-content text-sm">
+         <text>丸子</text>
+         <text class='padding-lr'>130****0000</text>
+      </view>
+      <view class="text-sm">四川省成都市新都区学院路西段天府小区</view>
+   </view>
+</view>
+
+<view class="order_drug">
+   <view class='border-bottom text-content padding-lr text-bold text-sm'>德瑞堂医药</view>
+   <view class="flex justify-between">
+      <view class='flex'>
+         <view class="img">
+            <image src='/image/drug.png' mode="widthFix"></image>
+         </view>
+         <view class="info">
+            <view class="text-sm">皮德邦 什么什么软膏 5g</view>
+            <view class='price text-red text-sm'>￥15.5</view>
+         </view>
+      </view>
+      <view>
+         <view class='text-gray text-sm'>x1</view>
+      </view>
+   </view>
+</view>
+
+<view class='order_item padding-lr'>
+   <view class="flex justify-between border-bottom">
+      <view class=' text-sm'>支付方式</view>
+      <view class="text-sm ">微信支付</view>
+   </view>
+   <view class="flex justify-between border-bottom">
+      <view class=' text-sm'>商品金额</view>
+      <view class="text-sm ">￥15.5</view>
+   </view>
+   <view class="flex justify-between border-bottom">
+      <view class=' text-sm'>配送费</view>
+      <view class="text-sm ">￥10</view>
+   </view>
+   <view class="flex justify-between">
+      <view class=' text-sm'></view>
+      <view class="text-sm ">实付金额：
+         <text class='text-red'>￥29.00</text>
+      </view>
+   </view>
+</view>
+
+<view class="order_item padding-lr">
+   <view class="flex justify-between border-bottom">
+      <view class=' text-sm'>订单详情</view>
+      <view class="text-sm "></view>
+   </view>
+   <view class="text-gray order_xq text-xs">
+      <view>订单号：20190814162804983122</view>
+      <view>下单时间：2019/08/14 16:28:05</view>
+   </view>
+</view>
+
+<view class="foot flex">
+   <view class="padding-lr">
+      <button plain class="text-sm qx_order">取消订单</button>
+   </view>
+   <view class="padding-lr">
+      <button class="bg-blue text-sm">立即支付</button>
+   </view>
+</view>

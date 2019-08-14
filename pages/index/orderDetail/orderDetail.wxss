@@ -1,0 +1,8 @@
+/* pages/index/orderDetail/orderDetail.wxss */
+page{background: #f5f5f5;padding-bottom: 160rpx;}
+
+.order_state{text-align: center;line-height: 60rpx;}
+.order_xq{line-height: 40rpx;color: rgba(0, 0, 0, 0.6);padding: 12rpx 0;}
+
+.foot{position: fixed;left: 0;right: 0;bottom: 0;background: #fff;padding: 20rpx 0;line-height: 80rpx;justify-content:flex-end;box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.06)}
+.foot .qx_order{border:1px solid #7EAEFE;color: #7EAEFE;}
