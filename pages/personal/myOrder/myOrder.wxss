@@ -1,0 +1,18 @@
+/* pages/personal/myOrder/myOrder.wxss */
+page{background: #f8f8f8;}
+.nav{display: flex;justify-content: space-between;padding: 20rpx;line-height: 2em;background: #fff;margin-top: 6rpx;}
+
+.nav-all,.nav-pending-pay,.nav-not-send,.nav-pending-receipt{
+  border-bottom: 1px solid #ae9d78;
+}
+
+.card{border: 1px solid red;margin-top: 20rpx;padding: 20rpx;background: #fff}
+.card-header,.card-content{display: flex;justify-content: space-between;align-items: center;}
+.order-num{font-size: 28rpx;}
+.order-num>text{margin-left: 20rpx;color: #555;}
+
+.commodity>image{width: 200rpx;height: 200rpx;}
+.price{font-size: 28rpx;color: #555;}
+
+.card-footer{display: flex;justify-content: flex-end;padding: 20rpx;}
+.button{background: #ae9d78;padding: 6rpx 18rpx;color: #fff}

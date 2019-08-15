@@ -1,36 +1,19 @@
 // pages/personal/address/address.js
+const app = getApp ()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    addressList:[
-      {
-        id:1,
-        name:"tudou",
-        tel:132473857,
-        province:[1,2,3],
-        address:'sfvghdy8ugyue',
-        defaultSelected:true
-      },
-      {
-        id:2,
-        name: "xigaun",
-        tel: 132473857,
-        province: [1, 2, 3],
-        address: 'sfvghdy8ugyue',
-        defaultSelected: false
-      },
-      
-    ]
+    addressList:[]
   },
 
   toAddAdress(){
 
- wx.navigateTo({
-   url: './addAddress/addAddress',
- })
+  wx.navigateTo({
+    url: './addAddress/addAddress',
+  })
 
   },
   handleDefault(event){
@@ -46,20 +29,62 @@ Page({
 
   },
   deleteAddress(event){
-    let index = event.currentTarget.dataset.index
-    let addressList=this.data.addressList
-    addressList.splice(index,1)
-    this.setData({
-      addressList
+   let id=event.currentTarget.dataset.id
+    wx.request({
+      url: app.globalData.appUrl + 'address/del_address',
+      data: {
+        "id":id,
+        "uid":1,
+
+      },
+      header: {},
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: (res)=> {
+        if(res.data.state){
+          wx.showToast({
+            title: '删除成功',
+            icon: 'none',
+            duration: 1000,
+            success: (res) =>{
+              this.onShow()
+             },
+            
+          })
+        }
+      },
+      fail: function(res) {},
+      complete: function(res) {},
     })
 
   },
+  getAddress(){
+   wx.request({
+     url: app.globalData.appUrl + 'address/address_list',
+     data: {
+       uid:1
+     },
+     header: {},
+     method: 'GET',
+     dataType: 'json',
+     responseType: 'text',
+     success: (res)=> {
+       console.log(res.data.info)
+       this.setData({
+         addressList: res.data.info
+       })
+     },
+     fail: function(res) {},
+     complete: function(res) {},
+   })
 
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onShow: function (options) {
-
+  onLoad: function (options) {
+    this.getAddress()
   },
 
   /**
@@ -73,7 +98,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getAddress()
   },
 
   /**

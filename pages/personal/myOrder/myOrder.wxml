@@ -1,0 +1,47 @@
+<!--pages/personal/myOrder/myOrder.wxml-->
+<view>
+
+  <view class="nav">
+
+     <text class="{{state===0? 'nav-all':''}}" bindtap="handleAll">全部</text>
+     <!-- <text class= "{{state===1? 'nav-pending-pay':''}}" bindtap="handlePay">待付款</text> -->
+     <!-- <text class="{{state===2? 'nav-not-send':''}}" bindtap="handleSend">待发货</text>
+     <text class= "{{state===3? 'nav-pending-receipt':''}}" bindtap="handleReceipt" >待收货</text> -->
+  
+  </view>
+
+<view class="main all" wx:if="{{state===0}}">
+
+
+  <view class="card">
+    <view class="card-header">
+     <view class="order-num">订单编号:<text>24353765496875697</text></view>
+     <view class="order-state">待收货</view>
+    
+    </view>
+    <view class="card-content">
+      <view class="commodity">
+       <image src="/image/drug.png"></image>
+      </view>
+      <view class="price">￥120</view>
+    
+    </view>
+    <view class="card-footer">
+     <view class="button">再次购买</view>
+    
+    </view>
+
+  </view>
+
+
+</view>
+
+<!-- <view class="main pending-pay" wx:elif="{{state===1}}">待付款</view>
+<view class="main not-send" wx:elif="{{state===2}}" >待发货</view>
+<view class="main pending-receipt" wx:elif="{{state===3}}">待收货</view> -->
+              
+
+</view>
+
+
+

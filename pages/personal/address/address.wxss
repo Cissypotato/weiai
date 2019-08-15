@@ -1,8 +1,9 @@
 /* pages/personal/address/address.wxss */
 
-page{background: #f8f8f8;height: 100%;box-sizing: border-box;}
+page{background: #f8f8f8;box-sizing: border-box;height: 100%;}
 
-.main{height:100%;position: relative;overflow: hidden;}
+.main{height:100%;position: relative;box-sizing: border-box}
+.card-Wrapper{height: 75%;overflow: auto;position: absolute;top: 0;}
 
 .card{background: #fff;margin-top: 20rpx;padding: 40rpx;line-height: 1.8em; }
 
@@ -18,6 +19,12 @@ page{background: #f8f8f8;height: 100%;box-sizing: border-box;}
 
 .icon-iconfontzhizuobiaozhunbduan10,.icon-dustbin_icon{font-size: 24rpx;color: #555;margin-right: 10rpx;}
 
-.button{position: absolute;bottom: 0;width: 100%;padding: 40rpx;box-sizing: border-box;}
+.button{position: fixed;bottom: 0;width: 100%;padding: 40rpx;box-sizing: border-box;background: #fff;border-top: 1px solid #eee }
 .button>button{background: #b5c46c;color: #fff;}
 
+
+
+.no-address{height: 100%;width: 100%;display: flex;justify-content: center;align-items: center;}
+.content-wrapper>text{font-size: 34rpx;color: #6c7733}
+.icon-wrapper{width: 100%;display: flex;justify-content: center;padding: 20rpx;box-sizing: border-box;margin-bottom: 80rpx;}
+.icon-jia1{font-size: 240rpx;color: #d0d8ab;}
