@@ -15,8 +15,27 @@ Page({
     })
   },
   getPhoneNumber(e) {
-    console.log(e.detail.errMsg)
-    console.log(e.detail.iv)
-    console.log(e.detail.encryptedData)
+    wx.request({
+      url: app.globalData.appUrl +'user/create_user',
+      data: {
+        code:this.data.code,
+        iv: e.detail.iv,
+        encryptedData: e.detail.encryptedData
+      },
+      header: {},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: function(res) {
+        console.log(res)
+        wx.setStorageSync(key, data)
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+    // console.log(e.detail.iv)
+    // console.log(e.detail.encryptedData)
   }
 })
+
+// https://jkxw.guaishe.com/index.php/index/user/create_user

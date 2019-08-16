@@ -2,10 +2,10 @@
 <view class="order_site">
    <view class="yes_site">
       <view class="text-content text-sm">
-         <text>丸子</text>
-         <text class='padding-lr'>130****0000</text>
+         <text>{{orderItem.name}}</text>
+         <text class='padding-lr'>{{orderItem.tel}}</text>
       </view>
-      <view class="text-sm">四川省成都市新都区学院路西段天府小区</view>
+      <view class="text-sm">{{orderItem.address}}</view>
    </view>
 </view>
 
@@ -17,12 +17,12 @@
             <image src='/image/drug.png' mode="widthFix"></image>
          </view>
          <view class="info">
-            <view class="text-sm">皮德邦 什么什么软膏 5g</view>
-            <view class='price text-red text-sm'>￥15.5</view>
+            <view class="text-sm">{{orderItem.drug_name}}</view>
+            <view class='price text-red text-sm'>￥{{orderItem.money}}</view>
          </view>
       </view>
       <view>
-         <view class='text-gray text-sm'>x1</view>
+         <view class='text-gray text-sm'>x{{orderItem.num}}</view>
       </view>
    </view>
 </view>
@@ -34,7 +34,7 @@
    </view>
    <view class="flex justify-between border-bottom">
       <view class=' text-sm'>商品金额</view>
-      <view class="text-sm ">￥15.5</view>
+      <view class="text-sm ">￥{{orderItem.money*orderItem.num}}</view>
    </view>
    <view class="flex justify-between border-bottom">
       <view class=' text-sm'>配送费</view>
@@ -43,7 +43,7 @@
    <view class="flex justify-between">
       <view class=' text-sm'></view>
       <view class="text-sm ">实付金额：
-         <text class='text-red'>￥29.00</text>
+         <text class='text-red'>￥{{orderItem.money*orderItem.num+10}}</text>
       </view>
    </view>
 </view>
@@ -54,16 +54,16 @@
       <view class="text-sm "></view>
    </view>
    <view class="text-gray order_xq text-xs">
-      <view>订单号：20190814162804983122</view>
-      <view>下单时间：2019/08/14 16:28:05</view>
+      <view>订单号：{{orderItem.number}}</view>
+      <view>下单时间：{{orderItem.create_time}}</view>
    </view>
 </view>
 
 <view class="foot flex">
-   <view class="padding-lr">
+   <view class="padding-lr" wx:if="{{orderItem.state===0}}">
       <button plain class="text-sm qx_order">取消订单</button>
    </view>
-   <view class="padding-lr">
+   <view class="padding-lr" wx:elif="{{orderItem.state===0}}">
       <button class="bg-blue text-sm">立即支付</button>
    </view>
 </view>

@@ -1,18 +1,41 @@
 // pages/index/orderDetail/orderDetail.js
+const app=getApp()
 Page({
 
    /**
     * 页面的初始数据
     */
    data: {
-
+     orderItem:null
    },
 
    /**
     * 生命周期函数--监听页面加载
     */
+    getOrder(id){
+      wx.request({
+        url: app.globalData.appUrl + 'order/drug_desc',
+        data: {
+          id
+        },
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: (res)=> {
+          console.log(res.data.info)
+          this.setData({
+            orderItem: res.data.info
+          })
+        },
+        fail: function(res) {},
+        complete: function(res) {},
+      })
+    },
    onLoad: function (options) {
 
+     let id = options.id
+     this.getOrder(id)
    },
 
    /**

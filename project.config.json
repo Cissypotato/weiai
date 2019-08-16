@@ -14,7 +14,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.8.0",
-	"appid": "wxdd878937e75e04eb",
+	"appid": "wxf687c16b2f5c0bd9",
 	"projectname": "miniprogram-2",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 10,
 			"list": [
 				{
 					"id": -1,
@@ -109,6 +109,14 @@
 					"id": -1,
 					"name": "roderDetail",
 					"pathName": "pages/index/orderDetail/orderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "pages/index/test/test",
+					"pathName": "pages/index/test/test",
+					"query": "",
 					"scene": null
 				}
 			]

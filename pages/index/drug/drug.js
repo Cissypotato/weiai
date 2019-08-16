@@ -1,4 +1,6 @@
 // pages/index/drug/drug.js
+
+const app=getApp()
 Page({
    data: {
       isIndex:0,
@@ -55,7 +57,7 @@ Page({
       wx.navigateTo({
          url: '/pages/index/orderConfirm/orderConfirm',
       })
-   }
-
+   },
+   
    
 })
