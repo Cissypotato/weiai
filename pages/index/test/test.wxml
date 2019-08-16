@@ -2,27 +2,28 @@
    <view class="query flex justify-between">
       <view class='flex align-center'>
          <icon class="iconfont icon-sousuo text-gray"></icon>
-         <input name="query" value="" placeholder="请输入关键词"></input>
+         <input name="query" value="" placeholder="请输入关键词" bindinput="query"></input>
       </view>
-      <view class="text-lg">搜索</view>
+      <view class="text-lg" bindtap="queryItem">搜索</view>
    </view>
    <view class='sort flex justify-between padding-lr text-lg'>
-      <view class="text-blue">综合排序</view>
-      <view>价格排序</view>
-      <view>推荐</view>
+      <block wx:for="{{navTar}}" wx:key>
+         <view class="{{isIndex==index?'text-blue':''}}" data-index="{{index}}" bindtap="qhTar">{{item.name}}</view>
+      </block>
    </view>
 </view>
 
 <view class="scroll">
-   <block wx:for="{{10}}" wx:key>
-      <navigator hover-class="none" open-type="navigate" url="/pages/index/drug/drug" class="flex drug">
+   <block wx:for="{{drugList}}" wx:key>
+      <navigator hover-class="none" open-type="navigate" url="/pages/index/drug/drug?id={{item.id}}" class="flex drug">
          <view>
-            <image src="/image/drug.png" mode="widthFix"></image>
+            <image src="{{item.img}}" mode="widthFix"></image>
          </view>
          <view>
-            <view class="text-cut">白云山 什么什么乳膏</view>
-            <view class="text-red">￥4.0</view>
+            <view class="text-cut">{{item.name}}</view>
+            <view class="text-red">￥{{item.price}}</view>
          </view>
       </navigator>
    </block>
+   <view class="text-content text-gray" style='padding:20rpx 0;text-align:center'>没有更多了</view>
 </view>
