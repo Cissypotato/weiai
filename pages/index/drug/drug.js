@@ -39,7 +39,13 @@ Page({
       })
    },
    jianNumber(e) {
+
       let number = this.data.number
+      if(number===0){
+        this.setData({
+          number: number
+        })
+      }
       number--
       this.setData({
          number: number

@@ -16,7 +16,50 @@
   <view class="card">
     <view class="card-header">
      <view class="order-num">订单编号:<text>24353765496875697</text></view>
+     <view class="order-state">待付款</view>
+    
+    </view>
+    <view class="card-content">
+      <view class="commodity">
+       <image src="/image/drug.png"></image>
+      </view>
+      <view class="price">￥120</view>
+    
+    </view>
+    <view class="card-footer">
+     <view class="button">去付款</view>
+    
+    </view>
+
+  </view>
+
+
+
+   <view class="card">
+    <view class="card-header">
+     <view class="order-num">订单编号:<text>24353765496875697</text></view>
      <view class="order-state">待收货</view>
+    
+    </view>
+    <view class="card-content">
+      <view class="commodity">
+       <image src="/image/drug.png"></image>
+      </view>
+      <view class="price">￥120</view>
+    
+    </view>
+    <view class="card-footer">
+     <view class="button">再次购买</view>
+    
+    </view>
+
+  </view>
+
+
+   <view class="card">
+    <view class="card-header">
+     <view class="order-num">订单编号:<text>24353765496875697</text></view>
+     <view class="order-state">已完成</view>
     
     </view>
     <view class="card-content">

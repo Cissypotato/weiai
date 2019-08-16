@@ -1,4 +1,4 @@
-<view class="bg-blue text-sm order_state">订单状态：代付款</view>
+<view class="bg-blue text-sm order_state">订单状态：待付款</view>
 <view class="order_site">
    <view class="yes_site">
       <view class="text-content text-sm">

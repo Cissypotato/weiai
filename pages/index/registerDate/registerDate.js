@@ -55,7 +55,7 @@ Page({
       let uname = e.detail.value.uname
       let myreg = /^(0|86|17951)?(13[0-9]|15[012356789]|16[6]|19[89]]|17[01345678]|18[0-9]|14[579])[0-9]{8}$/
       if (week_id != 0){
-         if(myreg.test(tel)){
+         if(myreg.test(tel)&&uname){
            wx.request({
              url:app.globalData.appUrl +'doctor/add_about',
              data: {
@@ -75,17 +75,15 @@ Page({
              fail: function(res) {},
              complete: function(res) {},
            })
-          //  https://jkxw.guaishe.com/index.php/index/doctor/add_about?queue_id=26&uid=1&name=李梦&tel=18202803577      
-           
-           
-           
-          //    添加预约   queue_id 排班id   uid=用户id  name = 就诊人  tel = 电话 
-
-          //  wx.navigateTo({
-          //     url: '/pages/index/registerInfo/registerInfo',
-          //  })
+        
 
 
+         }else if(!uname){
+           wx.showToast({
+             title: '请输入姓名',
+             icon: 'none',
+             duration: 1000,
+           })
          }else{
             wx.showToast({
                title: '请输入正确的手机号码',

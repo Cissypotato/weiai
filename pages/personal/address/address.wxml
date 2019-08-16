@@ -1,62 +1,68 @@
 <!--pages/personal/address/address.wxml-->
 <view class="main" wx:if="233">
   <view class="card-wrapper">
-  <!-- <view>收货地址</view> -->
-  <view class="card" wx:for="{{addressList}}">
+    <!-- <view>收货地址</view> -->
+    <view class="card" wx:for="{{addressList}}">
 
-    <view class="card-content">
-      <view class="content-left">
-        <view class="main-content">
-          <view>
-            <text class="name">{{item.name}}</text>
-            <text class="tel">{{item.tel}}</text>
-            <span class="default-selected" wx:if="{{item.default}}"> 默认</span>
+      <view class="card-content">
+        <view class="content-left">
+          <view class="main-content">
+            <view>
+              <text class="name">{{item.name}}</text>
+              <text class="tel">{{item.tel}}</text>
+              <span class="default-selected" wx:if="{{item.default}}"> 默认</span>
+            </view>
+            <view class="address">{{item.porvince}}-{{item.city}}-{{item.area}}-{{item.place}}</view>
+
           </view>
-           <view class="address">{{item.porvince}}-{{item.city}}-{{item.area}}-{{item.place}}</view>
-           
-        </view>
-          
-        <view class="selected">
-          <span class="iconfont icon-xuanze" wx:if="{{item.default}}" data-index="{{index}}" bindtap="handleDefault"></span>
-          <span class="iconfont icon-choose" wx:else data-index="{{index}}" bindtap="handleDefault"></span>
-        
-        </view>
-      </view>
-      <view class="content-right"></view>
-    </view>
 
+          <view class="selected">
+            <span class="iconfont icon-xuanze" wx:if="{{item.default}}" data-id="{{item.id}}" bindtap="handleDefault"></span>
+            <span class="iconfont icon-choose" wx:else data-id="{{item.id}}" bindtap="handleDefault"></span>
 
-    <view class="card-button">
-      <view> <span class="iconfont icon-iconfontzhizuobiaozhunbduan10"></span>编辑地址</view>
-      <view  bindtap="deleteAddress" data-index="{{index}}" data-id="{{item.id}}"> 
-        <span class="iconfont icon-dustbin_icon"></span>删除
+          </view>
+        </view>
+        <view class="content-right"></view>
       </view>
 
+
+      <view class="card-button">
+        <view bindtap="editAddress" data-id="{{item.id}}">
+          <span class="iconfont icon-iconfontzhizuobiaozhunbduan10"></span>
+          编辑地址
+        </view>
+        <view bindtap="deleteAddress" data-index="{{index}}" data-id="{{item.id}}">
+          <span class="iconfont icon-dustbin_icon"></span>删除
+        </view>
+
+      </view>
     </view>
+  </view>
+
+
+
+  <view class="button">
+    <button bindtap="toAddAdress">新建地址</button>
+
   </view>
 </view>
 
 
 
- <view class="button">
-  <button bindtap="toAddAdress">新建地址</button>
- 
- </view>
-</view>
+
+
+
+
+
 
 
 <view class="no-address" wx:else>
+  <view class="content-wrapper">
+    <view class="icon-wrapper" bindtap="toAddAdress">
 
-
-
- <view class="content-wrapper">
- <view class="icon-wrapper" bindtap="toAddAdress">
-  
-   <span class="iconfont icon-jia1"></span>
+      <span class="iconfont icon-jia1"></span>
+    </view>
+    <text> 您还没有收货地址，请添加收货地址</text>
   </view>
-  <text> 您还没有收货地址，请添加收货地址</text>
-  
-  
- </view>
 
 </view>

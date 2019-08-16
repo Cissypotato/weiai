@@ -11,22 +11,33 @@ Page({
 
   toAddAdress(){
 
-  wx.navigateTo({
-    url: './addAddress/addAddress',
-  })
+    wx.navigateTo({
+      url: './addAddress/addAddress',
+    })
 
   },
   handleDefault(event){
 
+    let id = event.currentTarget.dataset.id
+    wx.request({
+      url: app.globalData.appUrl + 'address/set_def_address',
+      data: {
+        "id": id,
+        "uid": 1,
 
+      },
+      header: {},
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: (res) => {
+        if (res.data.state) {
 
-    let index = event.currentTarget.dataset.index
-    let addressList = this.data.addressList
-    addressList[index].defaultSelected = !addressList[index].defaultSelected
-    this.setData({
-      addressList
+              this.onShow()
+        }
+         
+      },
     })
-
   },
   deleteAddress(event){
    let id=event.currentTarget.dataset.id
@@ -54,8 +65,6 @@ Page({
           })
         }
       },
-      fail: function(res) {},
-      complete: function(res) {},
     })
 
   },
@@ -80,59 +89,24 @@ Page({
    })
 
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  editAddress:function(event){
+    let id = event.currentTarget.dataset.id
+    wx.navigateTo({
+      url: './addAddress/addAddress?id='+id,
+    })
+  },
+  
   onLoad: function (options) {
     this.getAddress()
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onReady:function () {
+   
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
     this.getAddress()
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+ 
 })

@@ -16,7 +16,7 @@
 <view wx:else class="order_site">
    <view class="no_site flex justify-between align-center">
       <view class="text-sm">请先添加收货地址</view>
-      <icon class='iconfont icon-xuanzeqixiayige_o'></icon>
+      <icon class='iconfont icon-xuanzeqixiayige_o' bindtap="toAddress"></icon>
    </view>
    <view class="br-bt"></view>
 </view>

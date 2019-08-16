@@ -8,6 +8,7 @@ Page({
   data: {
 
     region: ['广东省', '广州市', '海珠区'],
+    addressItem:null
   },
 
   bindRegionChange: function (e) {
@@ -17,6 +18,54 @@ Page({
       region: e.detail.value
     })
   },
+  updateFormSubmit:function(e){
+    let name = e.detail.value.name
+    let province = e.detail.value.province[0]
+    let city = e.detail.value.province[1]
+    let area = e.detail.value.province[2]
+    let place = e.detail.value.address
+    let defaultValue = e.detail.value.defaultSelected ? 1 : 0
+    let tel = e.detail.value.tel
+    let myreg = /^(0|86|17951)?(13[0-9]|15[012356789]|16[6]|19[89]]|17[01345678]|18[0-9]|14[579])[0-9]{8}$/
+    if (myreg.test(tel)) {
+      wx.request({
+        url: app.globalData.appUrl + 'address/upt_address',
+        data: {
+          "id":this.data.id,
+          "porvince": province,
+          "city": city,
+          "area": area,
+          "name": name,
+          "tel": tel,
+          "place": place,
+        },
+        header: {},
+        method: 'POST',
+        dataType: 'json',
+        responseType: 'text',
+        success: function (res) {
+          if (res.data.state) {
+            wx.navigateBack({
+              delta: 1,
+              success: function () {
+                wx.showToast({
+                  title: '修改地址成功',
+                  icon: 'none',
+                  duration: 1000,
+                })
+              }
+            })
+          }
+
+
+        },
+        fail: function (res) { },
+        complete: function (res) { },
+      })
+    }
+
+  },
+
   formSubmit: function (e) {
     let name = e.detail.value.name
     let province = e.detail.value.province[0]
@@ -83,12 +132,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    let id=options.id
+    this.setData({
+      id
+    })
+    wx.request({
+      url: app.globalData.appUrl + 'address/select_address',
+      data: {
+        "id": id
+      },
+      header: {},
+      method: 'POST',
+      dataType: 'json',
+      responseType: 'text',
+      success: (res) => {
+        this.setData({
+          addressItem: res.data.info
+        })
+      },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
 
   },

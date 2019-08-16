@@ -52,6 +52,11 @@ Page({
       url: "./address/address"
     })
   },
+  toMyOrder() {
+    wx.navigateTo({
+      url: "./myOrder/myOrder"
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

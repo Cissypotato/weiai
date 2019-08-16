@@ -95,7 +95,7 @@
         <view class="cardList">
         <view class="listItem">
           <view class="circle-icon callDoctor">
-            <span class="iconfont icon-wodedingdan2"></span>
+            <span class="iconfont icon-wodedingdan2" bindtap="toMyOrder"></span>
           </view>
           <text>我的订单</text>
         </view>
