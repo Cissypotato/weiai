@@ -1,12 +1,12 @@
 <!--pages/index/orderConfirm/orderConfirm.wxml-->
 <view wx:if="{{isSite}}" class="order_site">
-   <view class="flex justify-between align-center">
+   <view class="flex justify-between align-center"  bindtap="toAddress">
       <view class="yes_site">
          <view class="text-content text-sm">
-            <text>丸子</text>
-            <text class='padding-lr'>130****0000</text>
+            <text>{{data.address.name}}</text>
+            <text class='padding-lr'>{{data.address.tel}}</text>
          </view>
-         <view class="text-sm">四川省成都市新都区学院路西段天府小区</view>
+         <view class="text-sm">{{data.address.address}}</view>
       </view>
       <icon class='iconfont icon-xuanzeqixiayige_o'></icon>
    </view>
@@ -14,9 +14,9 @@
 </view>
 
 <view wx:else class="order_site">
-   <view class="no_site flex justify-between align-center">
+   <view class="no_site flex justify-between align-center"  bindtap="toAddress">
       <view class="text-sm">请先添加收货地址</view>
-      <icon class='iconfont icon-xuanzeqixiayige_o' bindtap="toAddress"></icon>
+      <icon class='iconfont icon-xuanzeqixiayige_o' ></icon>
    </view>
    <view class="br-bt"></view>
 </view>
@@ -27,15 +27,15 @@
    <view class="flex justify-between">
       <view class='flex'>
          <view class="img">
-            <image src='/image/drug.png' mode="widthFix"></image>
+            <image src='{{data.drug.img}}' mode="widthFix"></image>
          </view>
          <view class="info">
-            <view class="text-sm">皮德邦 什么什么软膏 5g</view>
-            <view class='price text-red text-sm'>￥15.5</view>
+            <view class="text-sm">{{data.drug.name}}</view>
+            <view class='price text-red text-sm'>￥{{data.drug.price}}</view>
          </view>
       </view>
       <view>
-         <view class='text-gray text-sm'>x1</view>
+         <view class='text-gray text-sm'>x{{data.drug.num}}</view>
       </view>
    </view>
 </view>
@@ -47,18 +47,18 @@
    </view>
    <view class="flex justify-between border-bottom">
       <view class='text-bold text-sm'>商品金额</view>
-      <view class="text-sm text-gay">￥15.5</view>
+      <view class="text-sm text-gay">￥{{data.drug.money}}</view>
    </view>
    <view class="flex justify-between border-bottom">
       <view class='text-bold text-sm'>配送费</view>
-      <view class="text-sm text-gay">￥10</view>
+      <view class="text-sm text-gay">￥{{data.drug.freight}}</view>
    </view>
 </view>
 
 <view class="foot flex justify-between">
    <view>
       <text>应付金额：</text>
-      <text class="text-red">￥25.5</text>
+      <text class="text-red">￥{{data.drug.money}}</text>
    </view>
    <view class='bg-blue'>提交订单</view>
 </view>

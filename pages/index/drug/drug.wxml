@@ -1,14 +1,14 @@
 <view class="drug">
    <view class="drug_img">
-      <image src="/image/drug.png" mode="aspectFill"></image>
+      <image src="{{info.img}}" mode="aspectFill"></image>
    </view>
    <view class="drug_info">
       <view class="text-red">￥
-         <text class="text-xxl text-bold">11.9</text>
+         <text class="text-xxl text-bold">{{info.price}}</text>
       </view>
-      <view class="text-content text-xl text-bold">百多邦 莫匹多星软膏 168ml</view>
+      <view class="text-content text-xl text-bold">{{info.brand+info.name}}</view>
       <view class="text-sm text-gray">本商品由德瑞堂医药自营提供</view>
-      <view class="text-sm text-gray">批准文号：国药准字Z34020605</view>
+      <view class="text-sm text-gray">批准文号：{{info.symbol}}</view>
    </view>
 </view>
 <view class="drug_xq">
@@ -19,20 +19,22 @@
 </view>
 
 <view class="show_xq">
-   <view wx:if="{{isIndex==0}}">1</view>
+   <view wx:if="{{isIndex==0}}">
+      <rich-text nodes="{{nodes}}"></rich-text>
+   </view>
    <view wx:else class="text-sm text-gray">
       <view class=" flex align-center">
-         <text class="tit">商品名称</text>：独一味 什么什么无为片 0.25g*50片</view>
+         <text class="tit">商品名称</text>：{{info.brand+info.name}}</view>
       <view class=" flex align-center">
-         <text class="tit">品牌</text>：独一味</view>
+         <text class="tit">品牌</text>：{{info.brand}}</view>
       <view class=" flex align-center">
-         <text class="tit">规格</text>：6g*10袋</view>
+         <text class="tit">规格</text>：{{info.specs}}</view>
       <view class=" flex align-center">
-         <text class="tit">重量</text>：0.081kg</view>
+         <text class="tit">重量</text>：{{info.weight}}</view>
       <view class=" flex align-center">
-         <text class="tit">生产厂商</text>：神威药业集团有限公司</view>
+         <text class="tit">生产厂商</text>：{{info.firm}}</view>
       <view class=" flex align-center">
-         <text class="tit">批注文号</text>：国药准字Z34020605</view>
+         <text class="tit">批注文号</text>：{{info.symbol}}</view>
    </view>
 </view>
 
@@ -51,5 +53,5 @@
          <icon class='iconfont icon-jian' bindtap="jianNumber"></icon>
       </view>
    </view>
-   <button class="bg-blue" bindtap="orderConfirm">下一步</button>
+   <button class="bg-blue" bindtap="orderConfirm" data-id="{{info.id}}">下一步</button>
 </view>

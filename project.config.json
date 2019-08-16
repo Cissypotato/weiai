@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 12,
 			"list": [
 				{
 					"id": -1,
@@ -109,6 +109,28 @@
 					"id": -1,
 					"name": "roderDetail",
 					"pathName": "pages/index/orderDetail/orderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/test/test",
+					"pathName": "pages/index/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/drug/drug",
+					"pathName": "pages/index/drug/drug",
+					"query": "id=3",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/orderConfirm/orderConfirm",
+					"pathName": "pages/index/orderConfirm/orderConfirm",
+					"query": "id=3&num=2",
 					"scene": null
 				}
 			]

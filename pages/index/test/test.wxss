@@ -5,7 +5,7 @@
 .query>view:nth-child(1)>icon{font-size: 50rpx;padding: 0 20rpx;}
 .query>view:nth-child(2){text-align: center;width: 14%;}
 
-.sort{background: #fff;line-height: 90rpx;border-bottom: 1px solid #e4e4e4}
+.sort{background: #fff;line-height: 90rpx;border-bottom: 1px solid #e4e4e4;box-sizing: border-box}
 
 .drug{border-bottom: 1px solid #e4e4e4;padding: 20rpx;}
 .drug>view:nth-child(1){width: 20%;}
