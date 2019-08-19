@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    addressList:[]
+    addressList:[],
+    isLogin: false,
   },
 
   toAddAdress(){

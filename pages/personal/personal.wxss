@@ -6,7 +6,8 @@ page{background: #fff}
 
 .logOut{height: 100%;overflow: hidden;}
 .avatarWrapper{display: flex;margin-top: 40rpx;padding-left: 40rpx;}
-.avatarWrapper>text{line-height: 120rpx;margin-left: 20rpx;}
+.avatarWrapper>text,.avatarWrapper>open-data{line-height: 120rpx;margin-left: 20rpx;}
+
 .avatar{width: 120rpx;height: 120rpx;border-radius: 50%;background: gray;text-align: center;}
 open-data{width: 120rpx;height: 120rpx;border-radius: 50%;}
 /* .icon-geren{color: #ddd;line-height: 100rpx;font-size: 60rpx;} */

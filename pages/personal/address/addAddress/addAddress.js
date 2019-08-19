@@ -8,7 +8,8 @@ Page({
   data: {
 
     region: ['广东省', '广州市', '海珠区'],
-    addressItem:null
+    addressItem:null,
+    isLogin: false,
   },
 
   bindRegionChange: function (e) {

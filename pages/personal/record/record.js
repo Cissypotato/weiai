@@ -5,12 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-    formShow:true
+    formShow:true,
+    isLogin: false,
   },
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：', e.detail.value)
   },
 
+  getLogin: function () {
+    wx.navigateTo({
+      url: "./login/login"
+    })
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -29,12 +36,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    // var value = wx.getStorageSync('user')
+    // if (value) {
+    //   // Do something with return value
+    //   this.setData({
+    //     isLogin: true
+    //   })
+    // }else{
+    //   this.getLogin()
+    // }
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
+
+
   onHide: function () {
 
   },

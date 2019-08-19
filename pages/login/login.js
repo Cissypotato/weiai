@@ -27,8 +27,10 @@ Page({
       dataType: 'json',
       responseType: 'text',
       success: function(res) {
-        console.log(res)
-        wx.setStorageSync(key, data)
+        wx.setStorageSync("user", res.data.token)
+        wx.navigateBack({
+          delta: 1,
+        })
       },
       fail: function(res) {},
       complete: function(res) {},

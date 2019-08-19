@@ -3,10 +3,22 @@ Page({
    data: {
       isIndex: 0,
       isZg: false,
-      number: 1
+      number: 1,
+      isLogin:false
    },
    onLoad: function(options) {
       this.getInfo(options.id)
+   },
+   onShow(){
+     let value = wx.getStorage({
+       key: 'user',
+     })
+     if (value) {
+       this.setData({
+         isLogin: true
+       })
+     }
+
    },
    getInfo(id) {
       let then = this
@@ -79,16 +91,26 @@ Page({
       
    },
    orderConfirm(event) {
-      if (this.data.number >= 1){
+     if(this.data.isLogin){
+       if (this.data.number >= 1) {
          wx.navigateTo({
-            url: '/pages/index/orderConfirm/orderConfirm?id=' + event.currentTarget.dataset.id + '&num=' + this.data.number,
+           url: '/pages/index/orderConfirm/orderConfirm?id=' + event.currentTarget.dataset.id + '&num=' + this.data.number,
          })
-      }else{
+       } else {
          wx.showToast({
-            title: ' 请填写正确的数量',
-            icon: 'none',
-            duration: 1000,
+           title: ' 请填写正确的数量',
+           icon: 'none',
+           duration: 1000,
          })
-      }
+       }
+     }else{
+       wx.navigateTo({
+         url: './../../login/login',
+         success: function (res) { },
+         fail: function (res) { },
+         complete: function (res) { },
+       })
+     }
+      
    }
 })

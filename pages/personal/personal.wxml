@@ -8,9 +8,10 @@
       <view class="avatarWrapper">
         <view class="avatar" bindtap="getLogin">
           <open-data type="userAvatarUrl"></open-data>
-          <!-- <span class="iconfont icon-geren"></span> -->
         </view>
-        <text>未登录</text>
+       
+        <open-data type="userNickName" wx:if="{{isLogin}}"></open-data>
+        <text wx:else>未登录</text>
       </view>
       <view class="loginRight" bindtap="getLogin"> 立即登录查看您的健康档案</view>
     </view>
