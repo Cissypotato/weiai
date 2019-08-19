@@ -11,15 +11,11 @@ Page({
    },
    onShow:function(){
      let value =wx.getStorageSync('user')
-
-     console.log(value)
-     
      if (value) {
        this.setData({
          isLogin: true
        })
      }
-     console.log(this.data.isLogin)
    },
    getInfo(id) {
       let then = this
@@ -45,7 +41,6 @@ Page({
       })
    },
    tabQh(e) {
-      console.log(e.currentTarget.dataset.index)
       this.setData({
          isIndex: e.currentTarget.dataset.index
       })

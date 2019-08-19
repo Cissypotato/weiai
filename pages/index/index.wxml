@@ -21,7 +21,7 @@
          <icon class="iconfont icon-buoumaotubiao37"></icon>
          <view>健康药品</view>
       </navigator>
-      <navigator hover-class="none">
+      <navigator hover-class="none" bindtap="bd_tel">
          <icon class="iconfont icon-icon-test"></icon>
          <view>咨询医师</view>
       </navigator>

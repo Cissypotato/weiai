@@ -6,14 +6,15 @@
     <view class="logOut">
 
       <view class="avatarWrapper">
-        <view class="avatar" bindtap="getLogin">
+        <view class="avatar" bindtap="{{isLogin?'':'getLogin'}}">
           <open-data type="userAvatarUrl"></open-data>
         </view>
        
         <open-data type="userNickName" wx:if="{{isLogin}}"></open-data>
         <text wx:else>未登录</text>
       </view>
-      <view class="loginRight" bindtap="getLogin"> 立即登录查看您的健康档案</view>
+      <view class="loginRight" bindtap="getLogin"  wx:if="{{isLogin === false}}"> 立即登录查看您的健康档案</view>
+       <view class="loginRight"  wx:else>欢迎登录微爱小屋</view>
     </view>
 
 
