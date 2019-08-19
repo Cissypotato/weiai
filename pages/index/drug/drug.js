@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-// pages/index/drug/drug.js
-
 const app=getApp()
-=======
-const app = getApp()
->>>>>>> 651c06dba3064b75dd63c42f4b1374e549b79e76
 Page({
    data: {
       isIndex: 0,
@@ -84,15 +78,6 @@ Page({
       }
       
    },
-<<<<<<< HEAD
-   orderConfirm(){
-      wx.navigateTo({
-         url: '/pages/index/orderConfirm/orderConfirm',
-      })
-   },
-   
-   
-=======
    orderConfirm(event) {
       if (this.data.number >= 1){
          wx.navigateTo({
@@ -106,7 +91,4 @@ Page({
          })
       }
    }
-
-
->>>>>>> 651c06dba3064b75dd63c42f4b1374e549b79e76
 })
