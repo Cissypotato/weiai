@@ -77,13 +77,13 @@
    </view>
 </view>
 <view class="drug padding-lr flex">
-   <block wx:for="{{10}}" wx:key>
+   <block wx:for="{{medicineList}}" wx:key>
       <view class="drug_item">
-         <view class="img">
-            <image src="/image/drug.png" mode="widthFix"></image>
+         <view class="img" data-id="{{item.id}}" bindtap="toMedicine">
+            <image src="{{item.img}}" mode="widthFix"></image>
          </view>
-         <view class="text-cut text-content padding-lr">三九维泰感冒灵颗粒</view>
-         <view class="text-red text-content padding-lr">￥10.9</view>
+         <view class="text-cut text-content padding-lr">{{item.name}}</view>
+         <view class="text-red text-content padding-lr">￥{{item.price}}</view>
       </view>
    </block>
 </view>

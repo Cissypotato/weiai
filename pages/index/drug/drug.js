@@ -9,16 +9,17 @@ Page({
    onLoad: function(options) {
       this.getInfo(options.id)
    },
-   onShow(){
-     let value = wx.getStorage({
-       key: 'user',
-     })
+   onShow:function(){
+     let value =wx.getStorageSync('user')
+
+     console.log(value)
+     
      if (value) {
        this.setData({
          isLogin: true
        })
      }
-
+     console.log(this.data.isLogin)
    },
    getInfo(id) {
       let then = this

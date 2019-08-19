@@ -2,7 +2,8 @@ const app = getApp();
 
 Page({
    data: {
-     doctorList:null
+     doctorList:null,
+     medicineList:null
    },
    onLoad: function(options) {
      this.getData()
@@ -16,12 +17,14 @@ Page({
        responseType: 'text',
        success:(res)=> {
         //  let then=this
+        console.log(res)
          let data=res.data
-         if(data.state){
+         
            this.setData({
-             doctorList:data.info
+             doctorList:data.info,
+             medicineList:data.drug
            })
-         }
+         
         //  console.log(this.data.doctorList)
        },
        fail: function(res) {},
@@ -45,5 +48,12 @@ Page({
       wx.navigateTo({
          url: '/pages/index/registerDate/registerDate?id='+id,
       })
+   },
+   toMedicine(event){
+     let id = event.currentTarget.dataset.id
+     wx.navigateTo({
+       url: '/pages/index/drug/drug?id=' + id,
+     })
+     console.log(event.currentTarget.dataset.id)
    }
 })

@@ -60,5 +60,5 @@
       <text>应付金额：</text>
       <text class="text-red">￥{{data.drug.money}}</text>
    </view>
-   <view class='bg-blue'>提交订单</view>
+   <view class='bg-blue' bindtap="pay">提交订单</view>
 </view>
