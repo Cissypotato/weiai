@@ -18,7 +18,7 @@
     </view>
 
 
-    <view class="login" wx:if="{{loginif}}">
+    <!-- <view class="login" wx:if="{{loginif}}">
 
       <view class="avatarWrapper">
         <view class="avatar">
@@ -31,7 +31,7 @@
       </view>
       <view class="loginRight" bindtap="getLogin"> 立即登录查看您的健康档案</view>
 
-    </view>
+    </view> -->
 
 
 
@@ -86,14 +86,7 @@
             <text>我的问诊</text>
           </view>
         </view>
-        <view class="cardList">
-          <view class="listItem">
-            <view class="circle-icon physical-examination" bindtap="showMyphysical">
-              <span class="iconfont icon-tingzhenqi"></span>
-            </view>
-            <text>我的体检</text>
-          </view>
-        </view>
+        
         <view class="cardList">
         <view class="listItem">
           <view class="circle-icon callDoctor">
@@ -108,6 +101,14 @@
               <span class="iconfont icon-map"></span>
             </view>
             <text>我的地址</text>
+          </view>
+        </view>
+        <view class="cardList">
+          <view class="listItem">
+            <view class="circle-icon physical-examination" bindtap="showMyphysical">
+              <span class="iconfont icon-tingzhenqi"></span>
+            </view>
+            <text>我的体检</text>
           </view>
         </view>
         <!-- <view class="cardList">
