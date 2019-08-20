@@ -1,6 +1,7 @@
-/* pages/personal/address/address.wxss */
+/* pages/index/orderConfirm/addressList/adressList.wxss */
 
 page{background: #f8f8f8;padding-bottom: 200rpx;height: 100%}
+
 
 .main{box-sizing: border-box}
 .card-Wrapper{overflow: auto;}

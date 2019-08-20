@@ -8,6 +8,7 @@ Page({
   data: {
     orderList:[],
     isLogin: false,
+    hasOrder:true
   },
 
   /**
@@ -36,16 +37,25 @@ Page({
     wx.request({
       url: app.globalData.appUrl+'order/my_order_list',
       data: {
-        "uid":1
+        "uid":wx.getStorageSync('user')
       },
       header: {},
       method: 'GET',
       dataType: 'json',
       responseType: 'text',
       success: (res)=> {
-        this.setData({
-          orderList: res.data.info
-        })
+
+        if (res.data.info==="暂无数据"){
+          this.setData({
+            hasOrder:false
+          })
+        }else{
+          this.setData({
+            hasOrder: true,
+            orderList: res.data.info
+          })
+        }
+       
         console.log(res.data.info)
       },
       fail: function(res) {},

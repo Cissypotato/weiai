@@ -1,38 +1,38 @@
 <!--pages/personal/myrecord/record.wxml-->
 
 
-<view class="wrapper">
+<view class="wrapper" wx:if="{{hasInfo}}" >
 
 
   <!-- 我的预约挂号 -->
   <view class="reservation">
     <view class="title">预约挂号</view>
-    <view class="reservation-card">
+    <view class="reservation-card"  wx:for="{{mylist}}">
       <!-- <view class="card-header">
         <view class="card-header-content">
           <view class="doctor"> 梁平 中医师</view>
           <view class="skill">擅长：常见内科疾病，妇科病等</view>
         </view>
       </view> -->
-      <view class="card-content">
+      <view class="card-content" >
         <view class="item">
           就诊人：
-          <text>西瓜</text>
+          <text>{{item.name}}</text>
         </view>
 
         <view class="item">
           预约时间：
-          <text>2019-08-12</text>
+          <text>{{item.about_time}}</text>
         </view>
 
         <view class="item">
           预约医生：
-          <text>梁平 中医师 （内科，妇科）</text>
+          <text>{{item.doctor_name}} {{item.good}}</text>
         </view>
 
         <view class="item">
           挂号费：
-          <text>￥30</text>
+          <text>￥{{item.price}}</text>
         </view>
 
 
@@ -46,22 +46,22 @@
   <!-- 我的就诊记录 -->
   <view class="">
     <view class="title">就诊记录</view>
-    <view class="card">
+    <view class="card" wx:for="{{doctorList}}">
       <view class="card-header">
-        <image src="/image/doctor.png" class="avatar"></image>
+        <image src="{{item.img}}" class="avatar"></image>
         <view class="card-header-content">
-          <view class="doctor"> 梁平 中医师</view>
-          <view class="skill">擅长：常见内科疾病，妇科病等</view>
+          <view class="doctor"> {{item.doctor_list}} {{item.title}}</view>
+          <view class="skill">{{item.good}}</view>
         </view>
       </view>
       <view class="card-content">
         <view class="item">
           就诊人：
-          <text>西瓜</text>
+          <text>{{item.name}}</text>
         </view>
         <view class="item">
           就诊时间：
-          <text>2019-08-12</text>
+          <text>{{item.about_time}}</text>
         </view>
         <!-- <view class="item">
           挂号费：
@@ -70,30 +70,15 @@
       </view>
     </view>
 
-    <view class="card">
-      <view class="card-header">
-        <image src="/image/doctor.png" class="avatar"></image>
-        <view class="card-header-content">
-          <view class="doctor"> 梁平 中医师</view>
-          <view class="skill">擅长：常见内科疾病，妇科病等</view>
-        </view>
-      </view>
-      <view class="card-content">
-        <view class="item">
-          就诊人：
-          <text>西瓜</text>
-        </view>
-        <view class="item">
-          就诊时间：
-          <text>2019-08-12</text>
-        </view>
-        <!-- <view class="item">
-          挂号费：
-          <text>￥30</text>
-        </view> -->
-      </view>
-    </view>
+    
 
   </view>
 
 </view>
+
+
+<!-- <view class="noInfo" wx:elif="{{hasInfo===false}}">
+
+ 您还没有问诊记录
+
+</view> -->

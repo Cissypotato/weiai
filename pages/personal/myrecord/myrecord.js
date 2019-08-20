@@ -1,4 +1,6 @@
 // pages/personal/myrecord/record.js
+
+const app=getApp()
 Page({
 
   /**
@@ -6,13 +8,17 @@ Page({
    */
   data: {
     isLogin: false,
+    hasInfo:true,
+    mylist:[],
+    doctorList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   this.getInfo()
+   
   },
 
   /**
@@ -62,5 +68,45 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  getInfo(){
+    wx.request({
+      url: app.globalData.appUrl + "doctor/my_about",
+      data: {
+        uid:wx.getStorageSync("user")
+      },
+      header: {},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: (res)=> {
+        console.log(res)
+        if(res.data==''){
+          this.setData({
+            hasInfo:false
+          })
+        }else{
+          let mylist=[]
+          let doctorList=[]
+
+          let list = res.data
+          for (let i = 0; i < list.length;i++){
+            if(list[i].state==2){
+              console.log(list[i])
+              mylist.push(list[i])
+            } else if (list[i].state == 3){
+              doctorList.push(list[i])
+            }
+          }
+          this.setData({
+            hasInfo:true,
+            mylist:mylist,
+            doctorList:doctorList
+          })
+        }
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })
   }
 })

@@ -17,3 +17,7 @@ page{background: #f8f8f8;}
 
 .card-footer{display: flex;justify-content: flex-end;padding: 20rpx;}
 .button{background: #ae9d78;padding: 6rpx 18rpx;color: #fff}
+
+
+
+.noOrder{height:400rpx;display: flex;justify-content: center;align-items: center;color:ae9d78;font-size: 34rpx;color: #ae9d78 }

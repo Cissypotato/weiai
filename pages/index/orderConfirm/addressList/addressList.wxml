@@ -1,6 +1,8 @@
+<!--pages/index/orderConfirm/addressList/adressList.wxml-->
+
 <!--pages/personal/address/address.wxml-->
 <view class="main" wx:if="{{hasAddress}}">
-  <view class="card-wrapper" >
+  <view class="card-wrapper">
     <!-- <view>收货地址</view> -->
     <view class="card" wx:for="{{addressList}}">
 
@@ -17,8 +19,8 @@
           </view>
 
           <view class="selected">
-            <span class="iconfont icon-xuanze" wx:if="{{item.default}}" data-id="{{item.id}}" bindtap="handleDefault"></span>
-            <span class="iconfont icon-choose" wx:else data-id="{{item.id}}" bindtap="handleDefault"></span>
+            <span class="iconfont icon-xuanze" wx:if="{{item.default}}" data-id="{{item.id}}" bindtap="handleSelect"></span>
+            <span class="iconfont icon-choose" wx:else data-id="{{item.id}}" bindtap="handleSelect"></span>
 
           </view>
         </view>
@@ -41,12 +43,16 @@
 
 
 
-
   <view class="button">
     <button bindtap="toAddAdress">新建地址</button>
 
   </view>
 </view>
+
+
+
+
+
 
 
 
@@ -60,10 +66,5 @@
     </view>
     <text> 您还没有收货地址，请添加收货地址</text>
   </view>
-
-
-
-
-
 
 </view>

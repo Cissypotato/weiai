@@ -54,5 +54,21 @@ Page({
             }
          }
       })
-   }
+   },
+   toDoctorList(){
+     wx.navigateTo({
+       url: './register/register',
+       success: function(res) {},
+       fail: function(res) {},
+       complete: function(res) {},
+     })
+   },
+  toMedicineList() {
+    wx.navigateTo({
+      url: './test/test',
+      success: function (res) { },
+      fail: function (res) { },
+      complete: function (res) { },
+    })
+  },
 })

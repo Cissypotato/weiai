@@ -15,7 +15,8 @@
     "pages/personal/myrecord/myrecord",
     "pages/personal/address/address",
     "pages/personal/address/addAddress/addAddress",
-    "pages/personal/myOrder/myOrder"
+    "pages/personal/myOrder/myOrder",
+    "pages/index/orderConfirm/addressList/addressList"
   ],
   "window": {
     "backgroundTextStyle": "light",

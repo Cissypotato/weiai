@@ -7,7 +7,8 @@
 
   </view>
 
-  <view class="main">
+ 
+  <view class="main" wx:if="{{hasOrder}}">
 
 
     <view class="card" wx:for="{{orderList}}">
@@ -84,6 +85,16 @@
 
 
   </view>
+
+
+   <view class="noOrder" wx:else>
+   
+   
+   您还没有订单
+  
+  
+  </view>
+
 
   <!-- <view class="main pending-pay" wx:elif="{{state===1}}">待付款</view>
 <view class="main not-send" wx:elif="{{state===2}}" >待发货</view>

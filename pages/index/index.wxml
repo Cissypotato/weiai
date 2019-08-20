@@ -37,8 +37,8 @@
    </view> -->
 
    <view class="tag flex justify-between align-center ">
-      <view class="text-xl">推荐医师</view>
-      <view>查看更多
+      <view class="text-xl" >推荐医师</view>
+      <view bindtap="toDoctorList">查看更多
          <icon class="iconfont icon-xuanzeqixiayige_o"></icon>
       </view>
    </view>
@@ -72,7 +72,7 @@
 
 <view class="tag flex justify-between align-center padding-lr">
    <view class="text-xl">推荐好药</view>
-   <view>查看更多
+   <view bindtap="toMedicineList">查看更多
       <icon class="iconfont icon-xuanzeqixiayige_o"></icon>
    </view>
 </view>

@@ -13,9 +13,9 @@ page{padding-bottom: 32rpx;}
 .nav>navigator{border-radius: 6rpx;margin: 32rpx 0;width: 32%;text-align: center;color: #fff;padding: 32rpx 0;}
 .nav>navigator>icon{font-size: 50rpx;}
 .nav>navigator>view{line-height: 64rpx;}
-.nav>navigator:nth-child(1){background: linear-gradient(45deg,#46D445,#AEE33C);}
-.nav>navigator:nth-child(2){background: linear-gradient(45deg,#17C5DB,#45F0C9);}
-.nav>navigator:nth-child(3){background: linear-gradient(45deg,#A499FA,#90C4FF);}
+.nav>navigator:nth-child(1){background:#938fd3 ;}/*linear-gradient(45deg,#46D445,#AEE33C)*/
+.nav>navigator:nth-child(2){background:#b7c57a ;}/*linear-gradient(45deg,#17C5DB,#45F0C9)*/
+.nav>navigator:nth-child(3){background:#e7bc4e ;}/*linear-gradient(45deg,#A499FA,#90C4FF)*/
 
 /* 体检特辑 zp */
 .spe{flex-wrap: wrap;margin-bottom: 32rpx;}

@@ -8,6 +8,7 @@ Page({
   data: {
     addressList:[],
     isLogin: false,
+    hasAddress:true
   },
 
   toAddAdress(){
@@ -24,8 +25,7 @@ Page({
       url: app.globalData.appUrl + 'address/set_def_address',
       data: {
         "id": id,
-        "uid": 1,
-
+        "uid": wx.getStorageSync('user')
       },
       header: {},
       method: 'POST',
@@ -81,9 +81,17 @@ Page({
      responseType: 'text',
      success: (res)=> {
        console.log(res.data.info)
-       this.setData({
-         addressList: res.data.info
-       })
+       if (res.data.info==="暂无地址"){
+         this.setData({
+           hasAddress:false
+         })
+       }else{
+         this.setData({
+           hasAddress: true,
+           addressList: res.data.info
+         })
+       }
+       
      },
      fail: function(res) {},
      complete: function(res) {},

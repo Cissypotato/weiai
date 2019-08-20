@@ -1,23 +1,25 @@
 const app = getApp();
 Page({
   data: {
-    isSite: true,
+    isSite: false,
     Id: "",
     Num: '',
-    uid:''
+    uid:'',
+    defaltAdress:null,
+    addressList:[]
+
   },
   onLoad: function(options) {
     console.log(options)
     this.setData({
       Id: options.id,
-      Num: options.num
-
+      Num: options.num,
+      uid: wx.getStorageSync('user')
     })
-    this.getInfo()
-    console.log(this.data.uid)
+    // this.getInfo()
   },
   onShow: function() {
-
+    this.getInfo()
   },
   getInfo() {
     let then = this
@@ -26,10 +28,15 @@ Page({
       data: {
         id: this.data.Id,
         num: this.data.Num,
-        uid: wx.getStorageSync('user')
+        uid: this.data.uid
       },
       success: function(res) {
+
+        let address=res.data.address
+
+        console.log(res)
         then.setData({
+          defaltAdress,
           data: res.data
         })
       },
@@ -44,7 +51,7 @@ Page({
   },
   toAddress() {
     wx.navigateTo({
-      url: '/pages/personal/address/address'
+      url: './addressList/addressList'
     })
   },
   tjOrder() {

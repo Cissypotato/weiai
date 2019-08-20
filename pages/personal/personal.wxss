@@ -46,6 +46,6 @@ open-data{width: 120rpx;height: 120rpx;border-radius: 50%;}
 
 /*other*/
 
-.invitingFrends{background:#938FD3 }
+/* .invitingFrends{background:#938FD3 }
 .help{background:#b5c46c }
-.customerService{background:#F29C4B }
+.customerService{background:#F29C4B } */

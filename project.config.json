@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 12,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -116,6 +116,13 @@
 					"id": 10,
 					"name": "pages/index/test/test",
 					"pathName": "pages/index/test/test",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "addressList",
+					"pathName": "pages/index/orderConfirm/addressList/addressList",
 					"query": "",
 					"scene": null
 				}
