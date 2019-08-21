@@ -1,12 +1,12 @@
 <!--pages/index/orderConfirm/orderConfirm.wxml-->
 <view wx:if="{{isSite}}" class="order_site">
-   <view class="flex justify-between align-center"  bindtap="toAddress">
+   <view class="flex justify-between align-center" bindtap="toAddress" style="margin-bottom: 20rpx;">
       <view class="yes_site">
          <view class="text-content text-sm">
-            <text>{{defaultAddress.name}}</text>
-            <text class='padding-lr'>{{defaultAddress.tel}}</text>
+            <text>{{site[0].name}}</text>
+            <text class='padding-lr'>{{site[0].tel}}</text>
          </view>
-         <view class="text-sm">{{defaultAddress.porvince}}-{{defaultAddress.city}}-{{defaultAddress.area}}-{{defaultAddress.place}}</view>
+         <view class="text-sm">{{site[0].porvince}}-{{site[0].city}}-{{site[0].area}}-{{site[0].place}}</view>
       </view>
       <icon class='iconfont icon-xuanzeqixiayige_o'></icon>
    </view>
@@ -14,9 +14,9 @@
 </view>
 
 <view wx:else class="order_site">
-   <view class="no_site flex justify-between align-center"  bindtap="toAddress">
+   <view class="no_site flex justify-between align-center" bindtap="toAddress">
       <view class="text-sm">请先添加收货地址</view>
-      <icon class='iconfont icon-xuanzeqixiayige_o' ></icon>
+      <icon class='iconfont icon-xuanzeqixiayige_o'></icon>
    </view>
    <view class="br-bt"></view>
 </view>
@@ -60,5 +60,5 @@
       <text>应付金额：</text>
       <text class="text-red">￥{{medicine.money}}</text>
    </view>
-   <view class='bg-blue' bindtap="tjOrder">提交订单</view>
+   <view class='bg-blue' bindtap="tjOrder" data-address="{{site[0].id}}">提交订单</view>
 </view>

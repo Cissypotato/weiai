@@ -1,4 +1,6 @@
-<view class="bg-blue text-sm order_state">订单状态：待付款</view>
+<view class="bg-blue text-sm order_state" wx:if="{{orderItem.state == 0}}">订单状态：待付款</view>
+<view class="bg-blue text-sm order_state" wx:if="{{orderItem.state == 1}}">订单状态：待收货</view>
+<view class="bg-blue text-sm order_state" wx:if="{{orderItem.state == 2}}">订单状态：已完成</view>
 <view class="order_site">
    <view class="yes_site">
       <view class="text-content text-sm">
@@ -14,11 +16,11 @@
    <view class="flex justify-between">
       <view class='flex'>
          <view class="img">
-            <image src='/image/drug.png' mode="widthFix"></image>
+            <image src='{{orderItem.img}}' mode="widthFix"></image>
          </view>
          <view class="info">
             <view class="text-sm">{{orderItem.drug_name}}</view>
-            <view class='price text-red text-sm'>￥{{orderItem.money}}</view>
+            <view class='price text-red text-sm'>￥{{orderItem.drug_price}}</view>
          </view>
       </view>
       <view>
@@ -34,7 +36,7 @@
    </view>
    <view class="flex justify-between border-bottom">
       <view class=' text-sm'>商品金额</view>
-      <view class="text-sm ">￥{{orderItem.money*orderItem.num}}</view>
+      <view class="text-sm ">￥{{orderItem.drug_price*orderItem.num}}</view>
    </view>
    <view class="flex justify-between border-bottom">
       <view class=' text-sm'>配送费</view>
@@ -43,7 +45,7 @@
    <view class="flex justify-between">
       <view class=' text-sm'></view>
       <view class="text-sm ">实付金额：
-         <text class='text-red'>￥{{orderItem.money*orderItem.num+10}}</text>
+         <text class='text-red'>￥{{orderItem.money}}</text>
       </view>
    </view>
 </view>
@@ -60,10 +62,23 @@
 </view>
 
 <view class="foot flex">
-   <view class="padding-lr" wx:if="{{orderItem.state===0}}">
-      <button plain class="text-sm qx_order">取消订单</button>
-   </view>
-   <view class="padding-lr" wx:elif="{{orderItem.state===0}}">
-      <button class="bg-blue text-sm">立即支付</button>
-   </view>
+   <block wx:if="{{orderItem.state == 0}}">
+      <view class="padding-lr">
+         <button plain class="text-sm qx_order"  bindtap="toDelOrder" data-id="{{orderItem.id}}">取消订单</button>
+      </view>
+      <view class="padding-lr">
+         <button class="bg-blue text-sm" bindtap="toPay" data-id="{{orderItem.id}}">立即支付</button>
+      </view>
+   </block>
+   <block wx:if="{{orderItem.state == 1}}">
+      <view class="padding-lr">
+         <button class="bg-blue text-sm" bindtap="toSh" data-id="{{orderItem.id}}">确认收货</button>
+      </view>
+   </block>
+   <block wx:if="{{orderItem.state == 2}}">
+      <view class="padding-lr">
+         <button plain class="text-sm qx_order"  bindtap="toDelOrder" data-id="{{orderItem.id}}">删除订单</button>
+      </view>
+   </block>
+
 </view>

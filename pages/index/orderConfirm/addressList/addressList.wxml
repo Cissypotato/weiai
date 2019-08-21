@@ -4,7 +4,7 @@
 <view class="main" wx:if="{{hasAddress}}">
   <view class="card-wrapper">
     <!-- <view>收货地址</view> -->
-    <view class="card" wx:for="{{addressList}}">
+    <view class="card" wx:for="{{addressList}}" wx:key>
 
       <view class="card-content">
         <view class="content-left">
@@ -19,9 +19,7 @@
           </view>
 
           <view class="selected">
-            <span class="iconfont icon-xuanze" wx:if="{{selected}}" data-id="{{item.id}}" bindtap="handleSelect"></span>
-            <span class="iconfont icon-choose" wx:else data-id="{{item.id}}" bindtap="handleSelect"></span>
-
+            <span class="iconfont {{isIndex==index?'icon-xuanze':'icon-choose'}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="handleSelect"></span>
           </view>
         </view>
         <view class="content-right"></view>

@@ -1,0 +1,32 @@
+
+<scroll-view scroll-x="{{true}}" class="scroll_box">
+   <view class="scroll_item">
+      <image src="/image/banner.png" mode="widthFix"></image>
+   </view>
+   <view class="scroll_item">
+      <image src="/image/banner.png" mode="widthFix"></image>
+   </view>
+   <view class="scroll_item">
+      <image src="/image/banner.png" mode="widthFix"></image>
+   </view>
+</scroll-view>
+
+<view class="tar flex align-center padding-lr">
+   <view class="{{isIndex == 0?'cur':''}}">团购详情</view>
+   <view class="{{isIndex == 1?'cur':''}} padding-lr">购买须知</view>
+</view>
+
+<view wx:if="{{isIndex == 0}}" class="padding-lr">
+   <view class="tgxq">团购详情</view>
+   <view class="tg">
+      <view class='tg_title padding-lr flex justify-between'>
+         <view class="text-bold">痛经调理</view>
+         <view>1份 | 105元</view>
+      </view>
+      <view class='tg_content padding-lr'>
+         <view class="text-gray">简介</view>
+         <view>体质辨识+普通针灸+艾灸+TDP灯照射</view>
+      </view>
+   </view>
+</view>
+<view wx:else></view>

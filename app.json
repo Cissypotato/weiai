@@ -1,46 +1,49 @@
 {
-  "pages": [
-    "pages/personal/personal",
-    "pages/login/login",
-    "pages/index/index",
-    "pages/index/test/test",
-    "pages/index/register/register",
-    "pages/index/registerDate/registerDate",
-    "pages/index/registerInfo/registerInfo",
-    "pages/index/drug/drug",
-    "pages/index/orderConfirm/orderConfirm",
-    "pages/index/orderDetail/orderDetail",
-    "pages/logs/logs",
-    "pages/personal/record/record",
-    "pages/personal/myrecord/myrecord",
-    "pages/personal/address/address",
-    "pages/personal/address/addAddress/addAddress",
-    "pages/personal/myOrder/myOrder",
-    "pages/index/orderConfirm/addressList/addressList"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "微爱小屋",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "color": "#333",
-    "selectedColor": "#4A69F3",
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页",
-        "iconPath": "/image/tabbar/index.png",
-        "selectedIconPath": "/image/tabbar/index_cur.png"
-      },
-      {
-        "pagePath": "pages/personal/personal",
-        "text": "我的",
-        "iconPath": "/image/tabbar/mine.png",
-        "selectedIconPath": "/image/tabbar/mine_cur.png"
-      }
-    ]
-  },
-  "sitemapLocation": "sitemap.json"
+   "pages": [
+      "pages/index/index",
+      "pages/personal/personal",
+      "pages/login/login",
+      "pages/index/test/test",
+      "pages/index/register/register",
+      "pages/index/registerDate/registerDate",
+      "pages/index/registerInfo/registerInfo",
+      "pages/index/drug/drug",
+      "pages/index/orderConfirm/orderConfirm",
+      "pages/index/orderDetail/orderDetail",
+      "pages/logs/logs",
+      "pages/personal/record/record",
+      "pages/personal/myrecord/myrecord",
+      "pages/personal/address/address",
+      "pages/personal/address/addAddress/addAddress",
+      "pages/personal/myOrder/myOrder",
+      "pages/index/orderConfirm/addressList/addressList",
+      "pages/index/group/group",
+      "pages/index/groupItem/groupItem"
+      
+   ],
+   "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTitleText": "微爱小屋",
+      "navigationBarTextStyle": "black"
+   },
+   "tabBar": {
+      "color": "#333",
+      "selectedColor": "#4A69F3",
+      "list": [
+         {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "/image/tabbar/index.png",
+            "selectedIconPath": "/image/tabbar/index_cur.png"
+         },
+         {
+            "pagePath": "pages/personal/personal",
+            "text": "我的",
+            "iconPath": "/image/tabbar/mine.png",
+            "selectedIconPath": "/image/tabbar/mine_cur.png"
+         }
+      ]
+   },
+   "sitemapLocation": "sitemap.json"
 }

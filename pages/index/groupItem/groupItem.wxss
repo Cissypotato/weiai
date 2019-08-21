@@ -1,0 +1,18 @@
+/* pages/index/groupItem/groupItem.wxss */
+
+page {
+   background: #fff;
+}
+
+.scroll_box{padding:20rpx 0 20rpx  20rpx;width:100%;height: 280rpx;white-space: nowrap;}
+.scroll_box .scroll_item{display: inline-block;margin-right: 20rpx;width: 90%;}
+.scroll_box .scroll_item>image{width: 100%;border-radius: 6rpx;}
+
+.tar{line-height: 90rpx;font-size: 38rpx;font-weight: bold;}
+.tar>.cur{position: relative;color: #0AAB81;}
+.tar>.cur::after{position: absolute;content: '';left: 0;right: 0;bottom: 0;border-bottom: 3px solid #0AAB81;}
+
+.tgxq{line-height: 96rpx;}
+.tg{border:1px solid #F5F5F5;border-radius: 6rpx;line-height: 96rpx;}
+.tg>.tg_title{background: #FEF7E4;}
+

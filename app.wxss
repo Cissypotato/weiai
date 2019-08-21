@@ -48,7 +48,6 @@
 .order_item{background: #fff;margin-top: 20rpx;line-height: 90rpx;}
 
 
-
 /* 弹出层zg zp*/
 .zg{position: fixed;bottom: 0;top: 0;left: 0;right: 0;background: rgba(0, 0, 0, 0.4);z-index: 1}
 

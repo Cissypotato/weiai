@@ -1,0 +1,35 @@
+<view class="box">
+   <view class="query flex justify-between">
+      <view class='flex align-center'>
+         <icon class="iconfont icon-sousuo text-gray"></icon>
+         <input name="query" value="" placeholder="请输入关键词" bindinput="query"></input>
+      </view>
+      <view class="text-lg" bindtap="queryItem">搜索</view>
+   </view>
+   <view class='sort flex justify-between padding-lr text-lg'>
+      <block wx:for="{{navTar}}" wx:key>
+         <view class="{{isIndex==index?'text-blue':''}}" data-index="{{index}}" bindtap="qhTar">{{item.name}}</view>
+      </block>
+   </view>
+</view>
+
+<view class="scroll">
+   <block wx:for="{{drugList}}" wx:key>
+      <navigator hover-class="none" open-type="navigate" url="/pages/index/groupItem/groupItem?id={{item.id}}" class="flex drug justify-between align-center">
+         <view class="flex">
+            <view>
+               <image src="{{item.img}}" mode="widthFix"></image>
+            </view>
+            <view>
+               <view class="text-cut">{{item.name}}</view>
+               <view class="text-red"><text class="text-xxl text-bold">￥{{item.price}}</text><text class="text-sm text-gray padding-lr" style="text-decoration:line-through">￥{{item.price}}</text></view>
+            </view>
+         </view>
+         <view>
+            <button class="kt text-sm">开团</button>
+            <view class="text-red">2人团</view>
+         </view>
+      </navigator>
+   </block>
+   <view class="text-content text-gray" style='padding:20rpx 0;text-align:center'>没有更多了</view>
+</view>

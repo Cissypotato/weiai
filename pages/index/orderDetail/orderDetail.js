@@ -1,89 +1,161 @@
-// pages/index/orderDetail/orderDetail.js
-const app=getApp()
+const app = getApp()
 Page({
-
-   /**
-    * 页面的初始数据
-    */
    data: {
-     orderItem:null
+      orderItem: null
    },
-
-   /**
-    * 生命周期函数--监听页面加载
-    */
-    getOrder(id){
+   onLoad: function(options) {
+      this.getOrder(options.id)
+   },
+   getOrder(id) {
       wx.request({
-        url: app.globalData.appUrl + 'order/drug_desc',
-        data: {
-          id
-        },
-        header: {},
-        method: 'GET',
-        dataType: 'json',
-        responseType: 'text',
-        success: (res)=> {
-          console.log(res.data.info)
-          this.setData({
-            orderItem: res.data.info
-          })
-        },
-        fail: function(res) {},
-        complete: function(res) {},
+         url: app.globalData.appUrl + 'order/drug_desc',
+         data: {
+            id
+         },
+         header: {},
+         method: 'GET',
+         dataType: 'json',
+         responseType: 'text',
+         success: (res) => {
+            console.log(res.data.info)
+            this.setData({
+               orderItem: res.data.info
+            })
+         },
+         fail: function(res) {},
+         complete: function(res) {},
       })
-    },
-   onLoad: function (options) {
-
-     let id = options.id
-     this.getOrder(id)
    },
-
-   /**
-    * 生命周期函数--监听页面初次渲染完成
-    */
-   onReady: function () {
-
+   toPay(event) {
+      wx.login({
+         success: (res) => {
+            wx.request({
+               url: app.globalData.appUrl + "pay/returnPay",
+               data: {
+                  id: event.currentTarget.dataset.id,
+                  code: res.code
+               },
+               header: {},
+               method: 'GET',
+               dataType: 'json',
+               responseType: 'text',
+               success: (res) => {
+                  let pay = res.data
+                  let param = {
+                     "timeStamp": pay.timeStamp,
+                     "package": pay.package,
+                     "paySign": pay.paySign,
+                     "signType": pay.signType,
+                     "nonceStr": pay.nonceStr
+                  };
+                  this.payment(param)
+               },
+               fail: function(res) {
+                  wx.showToast({
+                     title: '请求失败请稍后再试',
+                     icon: 'none',
+                     duration: 1000,
+                  })
+               },
+            })
+         },
+      })
    },
+   payment(param) {
+      wx.requestPayment({
+         timeStamp: param.timeStamp,
+         nonceStr: param.nonceStr,
+         package: param.package,
+         signType: param.signType,
+         paySign: param.paySign,
+         success: function(res) {
+            wx.reLaunch({
+               url: '/pages/personal/myOrder/myOrder',
+               success: function(res) {
+                  wx.showToast({
+                     title: '支付成功',
+                     icon: 'none',
+                     duration: 1000,
+                  })
 
-   /**
-    * 生命周期函数--监听页面显示
-    */
-   onShow: function () {
+               }
+            })
+         },
+         fail: function(res) {
+            wx.reLaunch({
+               url: '/pages/personal/myOrder/myOrder',
+               success: function(res) {
+                  wx.showToast({
+                     title: '支付失败',
+                     icon: 'none',
+                     duration: 1000,
+                  })
 
+               }
+            })
+         },
+      })
    },
-
-   /**
-    * 生命周期函数--监听页面隐藏
-    */
-   onHide: function () {
-
+   toSh(event){
+      wx.request({
+         url: app.globalData.appUrl + 'order/sureOrder',
+         data: {
+            id: event.currentTarget.dataset.id
+         },
+         header: {},
+         method: 'GET',
+         dataType: 'json',
+         responseType: 'text',
+         success: function(res) {
+            wx.navigateBack({
+               delta: 1,
+               success:function(res){
+                  wx.showToast({
+                     title: '确认收货成功',
+                     icon: 'none',
+                     duration: 1000,
+                  })
+               }
+            })
+         },
+         fail: function(res) {
+            wx.showToast({
+               title: '请求失败请稍后再试',
+               icon: 'none',
+               duration: 1000,
+            })
+         },
+      })
    },
-
-   /**
-    * 生命周期函数--监听页面卸载
-    */
-   onUnload: function () {
-
-   },
-
-   /**
-    * 页面相关事件处理函数--监听用户下拉动作
-    */
-   onPullDownRefresh: function () {
-
-   },
-
-   /**
-    * 页面上拉触底事件的处理函数
-    */
-   onReachBottom: function () {
-
-   },
-
-   /**
-    * 用户点击右上角分享
-    */
-   onShareAppMessage: function () {
-
+   toDelOrder(event){
+      wx.request({
+         url: app.globalData.appUrl + 'order/delOrder',
+         data: {
+            id: event.currentTarget.dataset.id
+         },
+         header: {},
+         method: 'GET',
+         dataType: 'json',
+         responseType: 'text',
+         success: function (res) {
+            wx.navigateBack({
+               delta: 1,
+               success: function (res) {
+                  wx.showToast({
+                     title: '删除订单成功',
+                     icon: 'none',
+                     duration: 1000,
+                  })
+               }
+            })
+         },
+         fail: function (res) {
+            wx.showToast({
+               title: '请求失败请稍后再试',
+               icon: 'none',
+               duration: 1000,
+            })
+         },
+      })
    }
 })

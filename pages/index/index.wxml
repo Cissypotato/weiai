@@ -21,9 +21,9 @@
          <icon class="iconfont icon-buoumaotubiao37"></icon>
          <view>健康药品</view>
       </navigator>
-      <navigator hover-class="none" bindtap="bd_tel">
-         <icon class="iconfont icon-icon-test"></icon>
-         <view>咨询医师</view>
+      <navigator hover-class="none" url="/pages/index/group/group">
+         <icon class="iconfont icon-tuangou"></icon>
+         <view>团购套餐</view>
       </navigator>
    </view>
    <!-- 

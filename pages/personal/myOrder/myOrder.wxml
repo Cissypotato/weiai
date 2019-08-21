@@ -1,104 +1,33 @@
 <!--pages/personal/myOrder/myOrder.wxml-->
 <view>
+   <view class="nav">
+      <text bindtap="handleAll">历史记录</text>
+   </view>
+   <view class="main" wx:if="{{hasOrder}}">
+      <view class="card" wx:for="{{orderList}}" wx:key>
+         <view class="card-header" bindtap="toDetail" data-id="{{item.id}}">
+            <view class="order-num">订单编号:
+               <text>{{item.number}}</text>
+            </view>
+            <view class="order-state" wx:if="{{item.state===0}}">待付款</view>
+            <view class="order-state" wx:elif="{{item.state===1}}">待收货</view>
+            <view class="order-state" wx:elif="{{item.state===2}}">已完成</view>
+         </view>
+         <view class="card-content" bindtap="toDetail" data-id="{{item.id}}">
+            <view class="commodity">
+               <image src="{{item.img}}"></image>
+            </view>
+            <view class="price">￥{{item.money}}</view>
 
-  <view class="nav">
-
-    <text bindtap="handleAll">历史记录</text>
-
-  </view>
-
- 
-  <view class="main" wx:if="{{hasOrder}}">
-
-
-    <view class="card" wx:for="{{orderList}}">
-      <view class="card-header">
-        <view class="order-num">订单编号:
-          <text>{{item.number}}</text>
-        </view>
-        <view class="order-state" wx:if="{{item.state===0}}">待付款</view>
-        <view class="order-state" wx:elif="{{item.state===1}}">带配送</view>
-        <view class="order-state" wx:elif="{{item.state===2}}">已完成</view>
-
+         </view>
+         <view class="card-footer">
+            <view class="button" wx:if="{{item.state===0}}" bindtap="toDetail" data-id="{{item.id}}">去付款</view>
+            <view class="button" wx:if="{{item.state===1}}" bindtap="toDetail" data-id="{{item.id}}">确认收货</view>
+            <view class="button" wx:if="{{item.state===2}}" bindtap="toDetail" data-id="{{item.id}}">删除订单</view>
+         </view>
       </view>
-      <view class="card-content">
-        <view class="commodity">
-          <image src="{{item.img}}" bindtap="toDetail" data-id="{{item.id}}"></image>
-        </view>
-        <view class="price">￥{{item.money}}</view>
-
-      </view>
-      <view class="card-footer">
-        <view class="button" wx:if="{{item.state===0}}" bindtap="topay">去付款</view>
-        <view class="button" wx:else>再次购买</view>
-
-      </view>
-
-    </view>
-
-
-
-    <!-- <view class="card">
-      <view class="card-header">
-        <view class="order-num">订单编号:
-          <text>24353765496875697</text>
-        </view>
-        <view class="order-state">待收货</view>
-
-      </view>
-      <view class="card-content">
-        <view class="commodity">
-          <image src="/image/drug.png"></image>
-        </view>
-        <view class="price">￥120</view>
-
-      </view>
-      <view class="card-footer">
-        <view class="button">再次购买</view>
-
-      </view>
-
-    </view> -->
-
-
-    <!-- <view class="card">
-      <view class="card-header">
-        <view class="order-num">订单编号:
-          <text>24353765496875697</text>
-        </view>
-        <view class="order-state">已完成</view>
-
-      </view>
-      <view class="card-content">
-        <view class="commodity">
-          <image src="/image/drug.png"></image>
-        </view>
-        <view class="price">￥120</view>
-
-      </view>
-      <view class="card-footer">
-        <view class="button">再次购买</view>
-
-      </view>
-
-    </view> -->
-
-
-  </view>
-
-
+   </view>
    <view class="noOrder" wx:else>
-   
-   
-   您还没有订单
-  
-  
-  </view>
-
-
-  <!-- <view class="main pending-pay" wx:elif="{{state===1}}">待付款</view>
-<view class="main not-send" wx:elif="{{state===2}}" >待发货</view>
-<view class="main pending-receipt" wx:elif="{{state===3}}">待收货</view> -->
-
-
+      您还没有订单
+   </view>
 </view>
