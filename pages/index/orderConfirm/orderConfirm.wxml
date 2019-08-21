@@ -3,10 +3,10 @@
    <view class="flex justify-between align-center"  bindtap="toAddress">
       <view class="yes_site">
          <view class="text-content text-sm">
-            <text>{{data.address.name}}</text>
-            <text class='padding-lr'>{{data.address.tel}}</text>
+            <text>{{defaultAddress.name}}</text>
+            <text class='padding-lr'>{{defaultAddress.tel}}</text>
          </view>
-         <view class="text-sm">{{data.address.address}}</view>
+         <view class="text-sm">{{defaultAddress.porvince}}-{{defaultAddress.city}}-{{defaultAddress.area}}-{{defaultAddress.place}}</view>
       </view>
       <icon class='iconfont icon-xuanzeqixiayige_o'></icon>
    </view>
@@ -27,15 +27,15 @@
    <view class="flex justify-between">
       <view class='flex'>
          <view class="img">
-            <image src='{{data.drug.img}}' mode="widthFix"></image>
+            <image src='{{medicine.img}}' mode="widthFix"></image>
          </view>
          <view class="info">
-            <view class="text-sm">{{data.drug.name}}</view>
-            <view class='price text-red text-sm'>￥{{data.drug.price}}</view>
+            <view class="text-sm">{{medicine.name}}</view>
+            <view class='price text-red text-sm'>￥{{medicine.price}}</view>
          </view>
       </view>
       <view>
-         <view class='text-gray text-sm'>x{{data.drug.num}}</view>
+         <view class='text-gray text-sm'>x{{medicine.num}}</view>
       </view>
    </view>
 </view>
@@ -47,18 +47,18 @@
    </view>
    <view class="flex justify-between border-bottom">
       <view class='text-bold text-sm'>商品金额</view>
-      <view class="text-sm text-gay">￥{{data.drug.price}}</view>
+      <view class="text-sm text-gay">￥{{medicine.price}}</view>
    </view>
    <view class="flex justify-between border-bottom">
       <view class='text-bold text-sm'>配送费</view>
-      <view class="text-sm text-gay">￥{{data.drug.freight}}</view>
+      <view class="text-sm text-gay">￥{{medicine.freight}}</view>
    </view>
 </view>
 
 <view class="foot flex justify-between">
    <view>
       <text>应付金额：</text>
-      <text class="text-red">￥{{data.drug.money}}</text>
+      <text class="text-red">￥{{medicine.money}}</text>
    </view>
    <view class='bg-blue' bindtap="tjOrder">提交订单</view>
 </view>

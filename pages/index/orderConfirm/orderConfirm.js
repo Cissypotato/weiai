@@ -5,7 +5,8 @@ Page({
     Id: "",
     Num: '',
     uid:'',
-    defaltAdress:null,
+    medicine:null,
+    defaultAddress:null,
     addressList:[]
 
   },
@@ -16,13 +17,14 @@ Page({
       Num: options.num,
       uid: wx.getStorageSync('user')
     })
-    // this.getInfo()
+    this.getInfo()
+    
   },
   onShow: function() {
     this.getInfo()
   },
   getInfo() {
-    let then = this
+    // let then = this
     wx.request({
       url: app.globalData.appUrl + 'drug/drug_num',
       data: {
@@ -30,15 +32,32 @@ Page({
         num: this.data.Num,
         uid: this.data.uid
       },
-      success: function(res) {
+      success: (res) =>{
 
         let address=res.data.address
+        let defaultAddress=null
+        if(address){
+          for (let i = 0; i < address.length; i++) {
+            if (address[i].def === 1) {
+              defaultAddress = address[i]
+            }
+          }
 
-        console.log(res)
-        then.setData({
-          defaltAdress,
-          data: res.data
-        })
+          console.log(res)
+          this.setData({
+            isSite:true,
+            defaultAddress,
+            addressList: address,
+            medicine: res.data.drug
+          })
+
+        }else{
+          this.setData({
+            isSite:false
+          })
+        }
+        
+      
       },
       fail: function(res) {
         wx.showToast({

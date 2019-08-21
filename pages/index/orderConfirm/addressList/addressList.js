@@ -8,7 +8,8 @@ Page({
   data: {
     addressList: [],
     isLogin: false,
-    hasAddress: true
+    hasAddress: true,
+    selected:false,
   },
 
   toAddAdress() {
@@ -21,6 +22,23 @@ Page({
   handleSelect(event) {
 
     let id = event.currentTarget.dataset.id
+  
+    wx.request({
+      url: app.globalData.appUrl +'address/select_address',
+      data: {id},
+      header: {},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: (res)=> {
+        this.setData({
+          selected: true,
+        })
+        console.log(res)
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })
     // wx.request({
     //   url: app.globalData.appUrl + 'address/set_def_address',
     //   data: {

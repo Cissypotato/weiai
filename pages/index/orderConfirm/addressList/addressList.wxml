@@ -19,7 +19,7 @@
           </view>
 
           <view class="selected">
-            <span class="iconfont icon-xuanze" wx:if="{{item.default}}" data-id="{{item.id}}" bindtap="handleSelect"></span>
+            <span class="iconfont icon-xuanze" wx:if="{{selected}}" data-id="{{item.id}}" bindtap="handleSelect"></span>
             <span class="iconfont icon-choose" wx:else data-id="{{item.id}}" bindtap="handleSelect"></span>
 
           </view>
