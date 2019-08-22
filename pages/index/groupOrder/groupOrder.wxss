@@ -1,0 +1,12 @@
+/* pages/index/orderConfirm/orderConfirm.wxss */
+page{background: #f5f5f5;border-top: 1px solid #e4e4e4;}
+
+.br-bt {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAAAKCAYAAAAgnxVRAAAAAXNSR0IArs4c6QAAAehJREFUWAndWM9LAkEYfbM/BctTGGJoQR08CN4Fw7SL2V+beUkSRE8JefNQEFoiSSdL0HF/tGudRITdGZx1v9vufN/33nzzWOYtsZ0Ap+iODbTfKadu4ttk4wpKp5owIkb3CbTdFobPG1jJZqGVyp7aSp6ytyQPpxY6H8stGfu1lDiQUUyLE6c1HGDZ6ezX0LawlRMJaMWrLRmbl7gIdEpt1F8X4Pgx3sx2R2+jKkH1QoNEdgS4BmNPp1jU66GZJ4lGoVVvAcm73LxXrA3TdC4ItZcF5ga3m8Iawm4fJUJQOdfhilRImCYWtTvY87kQeN6gxBGlXrmBK1I/wSzQxhvFZGb5wQ5kTSGlInnIPBbfe6ONB1iTie/6oBWqhUtIyaRvWkwn0fs00P8yfIMHrTBzpCB3rAijZfSeYfT7wvB5AyuZDJRcjqmtb4GOvi20huExRfGohPKZQFM0GmHZajEdZpCKpXgcWvmamZIvgc6Wf6bI4veHinkjLA0iimuKdMiCrp32bOaYonvYVjiuSiQSge6aIllmOZZVrWeBWitTROGKNAxB/k1RTBOkTkeU1DVFjkjDEO489UoFJBbjsh3PAm0OKMY/JhfwIDTJn6hIxTyPgRt12nyEOR5z6ye6kZrPQ0qludH4BZc2kBBnZIU/AAAAAElFTkSuQmCC');
+    background-size:auto 100%;
+    height: 10rpx;
+    width: 100%;
+}
+
+.foot{position: fixed;background: #fff;line-height: 120rpx;bottom: 0;left: 0;right: 0;padding-left: 20rpx;}
+.foot>.bg-blue{width: 30%;text-align: center;}

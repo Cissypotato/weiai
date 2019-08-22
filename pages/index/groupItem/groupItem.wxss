@@ -2,6 +2,7 @@
 
 page {
    background: #fff;
+   padding-bottom: 200rpx;
 }
 
 .scroll_box{padding:20rpx 0 20rpx  20rpx;width:100%;height: 280rpx;white-space: nowrap;}
@@ -15,4 +16,9 @@ page {
 .tgxq{line-height: 96rpx;}
 .tg{border:1px solid #F5F5F5;border-radius: 6rpx;line-height: 96rpx;}
 .tg>.tg_title{background: #FEF7E4;}
+.tg>.tg_content>view:nth-child(1){width: 20%;}
+.tg_price>text:nth-child(2){width: 20%;text-align: right;}
+.hd{text-decoration:line-through}
 
+.footer{position: fixed;bottom: 0;left: 0;right: 0;box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.2);padding: 20rpx;z-index: 1;background: #fff;}
+.lj_qg{background: #FEAB33;color: #fff;}

@@ -1,3 +1,4 @@
+<view class="padding-lr text-content text-bold text-xx                         bl">中医通经调理</view>
 
 <scroll-view scroll-x="{{true}}" class="scroll_box">
    <view class="scroll_item">
@@ -12,21 +13,64 @@
 </scroll-view>
 
 <view class="tar flex align-center padding-lr">
-   <view class="{{isIndex == 0?'cur':''}}">团购详情</view>
-   <view class="{{isIndex == 1?'cur':''}} padding-lr">购买须知</view>
+   <view class="{{isIndex == 0?'cur':''}}" data-index="0" bindtap="xzTar">团购详情</view>
+   <view class="{{isIndex == 1?'cur':''}} padding-lr" data-index="1" bindtap="xzTar">购买须知</view>
 </view>
 
 <view wx:if="{{isIndex == 0}}" class="padding-lr">
    <view class="tgxq">团购详情</view>
    <view class="tg">
       <view class='tg_title padding-lr flex justify-between'>
-         <view class="text-bold">痛经调理</view>
+         <view class="text-bold">中医通经调理</view>
          <view>1份 | 105元</view>
       </view>
-      <view class='tg_content padding-lr'>
+      <view class='tg_content padding-lr flex'>
          <view class="text-gray">简介</view>
-         <view>体质辨识+普通针灸+艾灸+TDP灯照射</view>
+         <view class="text-cut">体质辨识+普通针灸+艾灸+TDP灯照射</view>
+      </view>
+      <view class='tg_content padding-lr flex'>
+         <view class="text-gray">时长</view>
+         <view class="text-cut">15~30分钟</view>
       </view>
    </view>
+   <view class="flex justify-end text-content tg_price">
+      <text>总价</text>
+      <text class="hd text-gray">105元</text>
+   </view>
+   <view class="flex justify-end text-content tg_price">
+      <text>团购价</text>
+      <text class="text-red text-xxl">1元</text>
+   </view>
+   <view>图文详情</view>
+   <view style="padding:20rpx;">
+      下面是富文本内容
+   </view>
 </view>
-<view wx:else></view>
+<view wx:else>
+   <view class="padding-lr text-content">
+      <view class="text-gray">购买须知</view>
+      <view class="text-bold">有效期</view>
+      <view>·购买后90天内有效</view>
+      <view class="text-bold">除外日期</view>
+      <view>·每周三、周六不可用</view>
+      <view class="text-bold">规则提醒</view>
+      <view>·不再与其他优惠同享</view>
+      <view class="text-bold">温馨提示</view>
+      <view>·如需团购券发票，请您在消费时间向商户咨询</view>
+   </view>
+</view>
+
+
+<view class="footer flex justify-between align-center">
+   <view class='flex'>
+      <view class="text-red">￥
+         <text class="text-xxl text-bold">1</text>
+      </view>
+      <view class='text-gray text-sm' style="padding-top:10rpx;padding-left:20rpx;">门市价
+         <text class="hd">￥105</text>
+      </view>
+   </view>
+   <view>
+      <button class="lj_qg" bindtap="lj_qg">立即抢购</button>
+   </view>
+</view>

@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -54,6 +54,12 @@
 					"name": "pages/index/groupItem/groupItem",
 					"pathName": "pages/index/groupItem/groupItem",
 					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/groupOrder/groupOrder",
+					"pathName": "pages/index/groupOrder/groupOrder",
 					"scene": null
 				}
 			]

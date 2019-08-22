@@ -8,9 +8,9 @@
 .sort{background: #fff;line-height: 90rpx;border-bottom: 1px solid #e4e4e4;box-sizing: border-box}
 
 .drug{border-bottom: 1px solid #e4e4e4;padding: 20rpx}
-.drug>view:nth-child(1){width: 20%;}
+.drug>view:nth-child(1){width: 30%;}
 .drug>view:nth-child(1)>image{width: 100%;}
-.drug>view:nth-child(2){width: 74%;position: relative;padding: 0 3%;}
+.drug>view:nth-child(2){width: 64%;position: relative;padding: 0 3%;}
 .drug>view:nth-child(2)>view:nth-child(2){position: absolute;bottom: 0;left: 3%;right: 3%;}
 
 .scroll{margin-top: 200rpx;}

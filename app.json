@@ -18,7 +18,8 @@
       "pages/personal/myOrder/myOrder",
       "pages/index/orderConfirm/addressList/addressList",
       "pages/index/group/group",
-      "pages/index/groupItem/groupItem"
+      "pages/index/groupItem/groupItem",
+      "pages/index/groupOrder/groupOrder"
       
    ],
    "window": {

@@ -1,0 +1,41 @@
+
+<view class="order_drug">
+   <view class='border-bottom text-content padding-lr text-bold text-sm'>德瑞堂医药</view>
+   <view class="flex justify-between">
+      <view class='flex'>
+         <view class="img">
+            <image src='{{medicine.img}}' mode="widthFix"></image>
+         </view>
+         <view class="info">
+            <view class="text-sm">{{medicine.name}}</view>
+            <view class='price text-red text-sm'>￥{{medicine.price}}</view>
+         </view>
+      </view>
+      <view>
+         <view class='text-gray text-sm'>x{{medicine.num}}</view>
+      </view>
+   </view>
+</view>
+
+<view class='order_item padding-lr'>
+   <view class="flex justify-between border-bottom">
+      <view class='text-bold text-sm'>支付方式</view>
+      <view class="text-sm text-gay">微信支付</view>
+   </view>
+   <view class="flex justify-between border-bottom">
+      <view class='text-bold text-sm'>商品金额</view>
+      <view class="text-sm text-gay">￥{{medicine.price}}</view>
+   </view>
+   <view class="flex justify-between border-bottom">
+      <view class='text-bold text-sm'>配送费</view>
+      <view class="text-sm text-gay">￥{{medicine.freight}}</view>
+   </view>
+</view>
+
+<view class="foot flex justify-between">
+   <view>
+      <text>应付金额：</text>
+      <text class="text-red">￥{{medicine.money}}</text>
+   </view>
+   <view class='bg-blue' bindtap="tjOrder" data-address="{{site[0].id}}">提交订单</view>
+</view>
