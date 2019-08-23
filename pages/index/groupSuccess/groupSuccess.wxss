@@ -1,0 +1,4 @@
+/* pages/index/groupSuccess/groupSuccess.wxss */
+.box{text-align: center;}
+.tit{line-height: 96rpx;font-size: 40rpx;font-weight: bold;}
+.inv_firend{background: #FCAB2F;color: #fff;margin: 20rpx 0;}

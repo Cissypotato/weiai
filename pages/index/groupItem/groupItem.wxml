@@ -1,6 +1,6 @@
 <view class="padding-lr text-content text-bold text-xx                         bl">中医通经调理</view>
 
-<scroll-view scroll-x="{{true}}" class="scroll_box">
+<scroll-view scroll-x="{{true}}" class="scroll_box" scroll-with-animation="{{true}}">
    <view class="scroll_item">
       <image src="/image/banner.png" mode="widthFix"></image>
    </view>
@@ -49,10 +49,10 @@
 <view wx:else>
    <view class="padding-lr text-content">
       <view class="text-gray">购买须知</view>
-      <view class="text-bold">有效期</view>
+      <!-- <view class="text-bold">有效期</view>
       <view>·购买后90天内有效</view>
       <view class="text-bold">除外日期</view>
-      <view>·每周三、周六不可用</view>
+      <view>·每周三、周六不可用</view> -->
       <view class="text-bold">规则提醒</view>
       <view>·不再与其他优惠同享</view>
       <view class="text-bold">温馨提示</view>

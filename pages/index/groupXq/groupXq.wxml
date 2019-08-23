@@ -1,0 +1,18 @@
+<view style="padding:20rpx;">
+   <view class="info flex">
+   <view class="info_img"><image src="/image/drug.png" mode='widthFix'></image></view>
+   <view class="info_cont">
+      <view class="text-cut">中医通经调理</view>
+      <view class="flex info_price text-red" style="align-items:flex-end">￥<text class="text-xxl text-bold">1</text><text class="text-gray hd padding-lr">￥105</text><view class="text-red">2人团</view></view>
+   </view>
+</view>
+
+<view class='padding-lr group'>
+   <view class="group_tit">仅剩一个名额,快来拼</view>
+   <view class="text-content">剩余时间<text class="text-red text-bold pad-lr">23</text>:<text class="text-red text-bold pad-lr">58</text>:<text class="text-red text-bold pad-lr">46</text></view>
+   <view>
+      <button class="my">我要参团</button>
+   </view>
+   <view class="text-gray text-content text-sm">24小时不成团自动退款</view>
+</view>
+</view>

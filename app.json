@@ -19,7 +19,9 @@
       "pages/index/orderConfirm/addressList/addressList",
       "pages/index/group/group",
       "pages/index/groupItem/groupItem",
-      "pages/index/groupOrder/groupOrder"
+      "pages/index/groupOrder/groupOrder",
+      "pages/index/groupSuccess/groupSuccess",
+      "pages/index/groupXq/groupXq"
       
    ],
    "window": {

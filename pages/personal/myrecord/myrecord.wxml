@@ -77,8 +77,8 @@
 </view>
 
 
-<!-- <view class="noInfo" wx:elif="{{hasInfo===false}}">
+<view class="noInfo" wx:elif="{{hasInfo===false}}">
 
  您还没有问诊记录
 
-</view> -->
+</view>

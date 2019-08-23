@@ -1,8 +1,8 @@
 <!--pages/personal/myOrder/myOrder.wxml-->
 <view>
-   <view class="nav">
+   <!-- <view class="nav">
       <text bindtap="handleAll">历史记录</text>
-   </view>
+   </view> -->
    <view class="main" wx:if="{{hasOrder}}">
       <view class="card" wx:for="{{orderList}}" wx:key>
          <view class="card-header" bindtap="toDetail" data-id="{{item.id}}">

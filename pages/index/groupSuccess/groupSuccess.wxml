@@ -1,0 +1,10 @@
+<view class="padding-lr box">
+   <view class="tit">再邀请1人，立即成团</view>
+   <view class="text-content text-gray text-sm">剩余时间23：59：53{{countDownMinute}}:{{countDownSecond}}</view>
+   <view>
+      <button class="inv_firend">邀请好友参团</button>
+   </view>
+   <view>
+      <text class='text-sm text-gray text-content'>24小时不成团自动退款</text>
+   </view>
+</view>

@@ -34,7 +34,7 @@
 
 <view class="foot flex justify-between">
    <view>
-      <text>应付金额：</text>
+      <text>应付金额：</text>4
       <text class="text-red">￥{{medicine.money}}</text>
    </view>
    <view class='bg-blue' bindtap="tjOrder" data-address="{{site[0].id}}">提交订单</view>
