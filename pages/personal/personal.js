@@ -7,7 +7,6 @@ Page({
    },
    onLoad: function(options) {
 
-
    },
    onShow: function() {
       var value = wx.getStorageSync('user')
@@ -82,5 +81,14 @@ Page({
       }
 
 
+   },
+   toGroup() {
+      if (this.data.isLogin) {
+         wx.navigateTo({
+            url: "/pages/index/groupList/groupList"
+         })
+      } else {
+         this.getLogin()
+      }
    }
 })

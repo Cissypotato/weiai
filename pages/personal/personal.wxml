@@ -1,202 +1,95 @@
 <!--pages/personal/personal.wxml-->
 <view class="wrapper">
 
-  <view class="header" wx:if-else>
+   <view class="header" wx:if-else>
 
-    <view class="logOut">
+      <view class="logOut">
 
-      <view class="avatarWrapper">
-        <view class="avatar" bindtap="{{isLogin?'':'getLogin'}}">
-          <open-data type="userAvatarUrl"></open-data>
-        </view>
-       
-        <open-data type="userNickName" wx:if="{{isLogin}}"></open-data>
-        <text wx:else>未登录</text>
+         <view class="avatarWrapper">
+            <view class="avatar" bindtap="{{isLogin?'':'getLogin'}}">
+               <open-data type="userAvatarUrl"></open-data>
+            </view>
+
+            <open-data type="userNickName" wx:if="{{isLogin}}"></open-data>
+            <text wx:else>未登录</text>
+         </view>
+         <view class="loginRight" bindtap="getLogin" wx:if="{{isLogin === false}}"> 立即登录查看您的健康档案</view>
+         <view class="loginRight" wx:else>欢迎登录微爱小屋</view>
       </view>
-      <view class="loginRight" bindtap="getLogin"  wx:if="{{isLogin === false}}"> 立即登录查看您的健康档案</view>
-       <view class="loginRight"  wx:else>欢迎登录微爱小屋</view>
-    </view>
+   </view>
+   <view class="card-wrapper">
 
+      <view class="card healthy">
+         <view class="cardTitle">
+            我的健康
+         </view>
+         <view class="cardListWrapper">
 
-    <!-- <view class="login" wx:if="{{loginif}}">
-
-      <view class="avatarWrapper">
-        <view class="avatar">
-          <block>
-            <open-data></open-data>
-            <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-            <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-          </block>
-        </view>
+            <view class="cardList">
+               <view class="listItem" bindtap="getHealthyRecord">
+                  <view class="circle-icon health-file ">
+                     <span class="iconfont icon-wenjian"></span>
+                  </view>
+                  <text>健康档案</text>
+               </view>
+            </view>
+            <view class="cardList">
+               <view class="listItem" bindtap="showMyphysical">
+                  <view class="circle-icon medical-report">
+                     <span class="iconfont icon-buoumaotubiao37"></span>
+                  </view>
+                  <text>体检报告</text>
+               </view>
+            </view>
+         </view>
       </view>
-      <view class="loginRight" bindtap="getLogin"> 立即登录查看您的健康档案</view>
-
-    </view> -->
-
-
-
-  </view>
-
-
-
-
-
-  <view class="card-wrapper">
-
-    <view class="card healthy">
-      <view class="cardTitle">
-        我的健康
+      <view class="card service">
+         <view class="cardTitle">
+            我的服务
+         </view>
+         <view class="cardListWrapper">
+            <view class="cardList">
+               <view class="listItem">
+                  <view class="circle-icon reservation" bindtap="toMyrecord">
+                     <span class="iconfont icon-yisheng"></span>
+                  </view>
+                  <text>我的问诊</text>
+               </view>
+            </view>
+            <view class="cardList">
+               <view class="listItem">
+                  <view class="circle-icon callDoctor">
+                     <span class="iconfont icon-wodedingdan2" bindtap="toMyOrder"></span>
+                  </view>
+                  <text>我的订单</text>
+               </view>
+            </view>
+            <view class="cardList">
+               <view class="listItem">
+                  <view class="circle-icon physical-examination">
+                     <span class="iconfont icon-wodedingdan2" bindtap="toGroup"></span>
+                  </view>
+                  <text>我的团购</text>
+               </view>
+            </view>
+            <view class="cardList">
+               <view class="listItem">
+                  <view class="circle-icon register-h" bindtap="toAdrress">
+                     <span class="iconfont icon-map"></span>
+                  </view>
+                  <text>我的地址</text>
+               </view>
+            </view>
+            <view class="cardList">
+               <view class="listItem">
+                  <view class="circle-icon physical-examination" bindtap="showMyphysical">
+                     <span class="iconfont icon-tingzhenqi"></span>
+                  </view>
+                  <text>我的体检</text>
+               </view>
+            </view>
+         </view>
       </view>
-      <view class="cardListWrapper">
 
-        <view class="cardList">
-          <view class="listItem" bindtap="getHealthyRecord">
-            <view class="circle-icon health-file ">
-              <span class="iconfont icon-wenjian"></span>
-            </view>
-            <text>健康档案</text>
-          </view>
-        </view>
-        <view class="cardList">
-          <view class="listItem">
-            <view class="circle-icon medical-report">
-              <span class="iconfont icon-buoumaotubiao37"></span>
-            </view>
-            <text>体检报告</text>
-          </view>
-        </view>
-      </view>
-
-    </view>
-
-
-
-    <view class="card service">
-      <view class="cardTitle">
-        我的服务
-      </view>
-      <view class="cardListWrapper">
-
-
-        <view class="cardList">
-          <view class="listItem">
-            <view class="circle-icon reservation" bindtap="toMyrecord">
-              <span class="iconfont icon-yisheng"></span>
-            </view>
-            <text>我的问诊</text>
-          </view>
-        </view>
-        
-        <view class="cardList">
-        <view class="listItem">
-          <view class="circle-icon callDoctor">
-            <span class="iconfont icon-wodedingdan2" bindtap="toMyOrder"></span>
-          </view>
-          <text>我的订单</text>
-        </view>
-      </view>
-       <view class="cardList">
-          <view class="listItem">
-            <view class="circle-icon register-h" bindtap="toAdrress">
-              <span class="iconfont icon-map"></span>
-            </view>
-            <text>我的地址</text>
-          </view>
-        </view>
-        <view class="cardList">
-          <view class="listItem">
-            <view class="circle-icon physical-examination" bindtap="showMyphysical">
-              <span class="iconfont icon-tingzhenqi"></span>
-            </view>
-            <text>我的体检</text>
-          </view>
-        </view>
-        <!-- <view class="cardList">
-        <view class="listItem">
-          <view class="circle-icon register-h">
-            <span class="iconfont icon-yuyueguahao"></span>
-          </view>
-          <text>我的挂号</text>
-        </view>
-      </view> -->
-      </view>
-    </view>
-
-    <!-- <view class="card order">
-      <view class="cardTitle">
-        我的订单
-      </view>
-      <view class="cardListWrapper">
-
-        <view class="cardList">
-          <view class="listItem">
-            <view class="circle-icon reservation" bindtap="toMyrecord">
-              <span class="iconfont icon-quanbudingdan01"></span>
-            </view>
-            <text>全部订单</text>
-          </view>
-        </view>
-        <view class="cardList">
-          <view class="listItem">
-            <view class="circle-icon physical-examination" bindtap="showMyphysical">
-              <span class="iconfont icon-daifukuan"></span>
-            </view>
-            <text>待付款</text>
-          </view>
-        </view>
-        <view class="cardList">
-          <view class="listItem">
-            <view class="circle-icon callDoctor">
-              <span class="iconfont icon-daifahuo"></span>
-            </view>
-            <text>待发货</text>
-          </view>
-        </view>
-        <view class="cardList">
-          <view class="listItem">
-            <view class="circle-icon register-h">
-              <span class="iconfont icon-daishouhuo1"></span>
-            </view>
-            <text>待收货</text>
-          </view>
-        </view>
-       
-        
-      </view>
-    </view> -->
-
-    <!-- 
-    <view class="card other">
-      <view class="cardTitle">
-        其他
-      </view>
-      <view class="cardListWrapper">
-        <view class="cardList">
-          <view class="listItem">
-            <view class="circle-icon invitingFrends">
-              <span class="iconfont icon-haoyou"></span>
-            </view>
-            <text>邀请好友</text>
-          </view>
-        </view>
-        <!-- <view class="cardList">
-          <view class="listItem">
-            <view class="circle-icon help">
-              <span class="iconfont icon-wenti"></span>
-            </view>
-            <text>帮助与反馈</text>
-          </view>
-        </view> -->
-    <!-- <view class="cardList">
-          <view class="listItem">
-            <view class="circle-icon customerService" bindtap="tel">
-              <span class="iconfont icon-icon-test"></span>
-            </view>
-            <text bindtap="tel">联系客服</text>
-          </view>
-        </view>
-      </view>
-    </view> -->
-
-  </view>
+   </view>
 </view>

@@ -1,4 +1,4 @@
-<view class="padding-lr text-content text-bold text-xx                         bl">中医通经调理</view>
+<view class="padding-lr text-content text-bold text-xxl">{{info.name}}</view>
 
 <scroll-view scroll-x="{{true}}" class="scroll_box" scroll-with-animation="{{true}}">
    <view class="scroll_item">
@@ -21,29 +21,29 @@
    <view class="tgxq">团购详情</view>
    <view class="tg">
       <view class='tg_title padding-lr flex justify-between'>
-         <view class="text-bold">中医通经调理</view>
-         <view>1份 | 105元</view>
+         <view class="text-bold">{{info.name}}</view>
+         <view>1份 | {{info.total}}元</view>
       </view>
       <view class='tg_content padding-lr flex'>
          <view class="text-gray">简介</view>
-         <view class="text-cut">体质辨识+普通针灸+艾灸+TDP灯照射</view>
+         <view class="text-cut">{{info.desc}}</view>
       </view>
       <view class='tg_content padding-lr flex'>
          <view class="text-gray">时长</view>
-         <view class="text-cut">15~30分钟</view>
+         <view class="text-cut">{{info.duration}}</view>
       </view>
    </view>
    <view class="flex justify-end text-content tg_price">
       <text>总价</text>
-      <text class="hd text-gray">105元</text>
+      <text class="hd text-gray">{{info.total}}元</text>
    </view>
    <view class="flex justify-end text-content tg_price">
       <text>团购价</text>
-      <text class="text-red text-xxl">1元</text>
+      <text class="text-red text-xxl">{{info.price}}元</text>
    </view>
-   <view>图文详情</view>
-   <view style="padding:20rpx;">
-      下面是富文本内容
+   <view class="text-content">图文详情</view>
+   <view>
+      <rich-text nodes="{{nodes}}"></rich-text>
    </view>
 </view>
 <view wx:else>
@@ -54,9 +54,9 @@
       <view class="text-bold">除外日期</view>
       <view>·每周三、周六不可用</view> -->
       <view class="text-bold">规则提醒</view>
-      <view>·不再与其他优惠同享</view>
+      <view>·{{info.rule_reminder}}</view>
       <view class="text-bold">温馨提示</view>
-      <view>·如需团购券发票，请您在消费时间向商户咨询</view>
+      <view>·{{info.reminder}}</view>
    </view>
 </view>
 
@@ -64,13 +64,13 @@
 <view class="footer flex justify-between align-center">
    <view class='flex'>
       <view class="text-red">￥
-         <text class="text-xxl text-bold">1</text>
+         <text class="text-xxl text-bold">{{info.price}}</text>
       </view>
       <view class='text-gray text-sm' style="padding-top:10rpx;padding-left:20rpx;">门市价
-         <text class="hd">￥105</text>
+         <text class="hd">￥{{info.total}}</text>
       </view>
    </view>
    <view>
-      <button class="lj_qg" bindtap="lj_qg">立即抢购</button>
+      <button class="lj_qg" bindtap="lj_qg" data-id="{{info.id}}">立即抢购</button>
    </view>
 </view>

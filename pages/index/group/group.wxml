@@ -26,8 +26,8 @@
             </view>
          </view>
          <view>
-            <button class="kt text-sm">开团</button>
-            <view class="text-red">2人团</view>
+            <button class="kt text-sm" >开团</button>
+            <view class="text-red">{{item.num}}人团</view>
          </view>
       </navigator>
    </block>

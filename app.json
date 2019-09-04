@@ -21,8 +21,9 @@
       "pages/index/groupItem/groupItem",
       "pages/index/groupOrder/groupOrder",
       "pages/index/groupSuccess/groupSuccess",
-      "pages/index/groupXq/groupXq"
-      
+      "pages/index/groupXq/groupXq",
+      "pages/index/groupList/groupList",
+      "pages/index/groupDetails/groupDetails"
    ],
    "window": {
       "backgroundTextStyle": "light",
@@ -47,6 +48,11 @@
             "selectedIconPath": "/image/tabbar/mine_cur.png"
          }
       ]
+   },
+   "permission": {
+      "scope.userLocation": {
+         "desc": "你的位置信息将用于小程序位置接口的效果展示" 
+      }
    },
    "sitemapLocation": "sitemap.json"
 }

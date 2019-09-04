@@ -12,19 +12,20 @@ Page({
       drugList: {},
       queryText: ''
    },
-   onLoad: function (options) {
+   onLoad: function(options) {
       this.getDrugList()
    },
-   getDrugList: function () {
+   getDrugList: function() {
       let then = this
       wx.request({
-         url: app.globalData.appUrl + 'drug/drug_list',
-         success: function (res) {
+         url: app.globalData.appUrl + 'drugs/drugs_list',
+         success: function(res) {
+            console.log(res)
             then.setData({
                drugList: res.data.info
             })
          },
-         fail: function (res) {
+         fail: function(res) {
             wx.showToast({
                title: '网络错误请稍后再试',
                icon: 'none',
@@ -33,13 +34,17 @@ Page({
          },
       })
    },
-   qhTar: function (event) {
+   qhTar: function(event) {
       var then = this
       let data
       if (event.currentTarget.dataset.index == 1) {
-         data = { price: "desc" }
+         data = {
+            price: "desc"
+         }
       } else if (event.currentTarget.dataset.index == 2) {
-         data = { state: 1 }
+         data = {
+            state: 1
+         }
       } else if (event.currentTarget.dataset.index == 2) {
          data = {}
       }
@@ -48,14 +53,14 @@ Page({
          data: {
             data
          },
-         success: function (res) {
+         success: function(res) {
             console.log(res)
             then.setData({
                isIndex: event.currentTarget.dataset.index,
                drugList: res.data.info
             })
          },
-         fail: function (res) {
+         fail: function(res) {
             wx.showToast({
                title: '网络错误请稍后再试',
                icon: 'none',
@@ -64,24 +69,24 @@ Page({
          },
       })
    },
-   query: function (e) {
+   query: function(e) {
       this.setData({
          queryText: e.detail.value
       })
    },
-   queryItem: function () {
+   queryItem: function() {
       let then = this
       wx.request({
          url: app.globalData.appUrl + 'drug/drug_list',
          data: {
             key: then.data.queryText
          },
-         success: function (res) {
+         success: function(res) {
             then.setData({
                drugList: res.data.info
             })
          },
-         fail: function (res) {
+         fail: function(res) {
             wx.showToast({
                title: '网络错误请稍后再试',
                icon: 'none',
@@ -89,5 +94,5 @@ Page({
             })
          },
       })
-   }
+   },
 })

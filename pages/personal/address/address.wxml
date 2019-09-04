@@ -2,7 +2,7 @@
 <view class="main" wx:if="{{hasAddress}}">
   <view class="card-wrapper" >
     <!-- <view>收货地址</view> -->
-    <view class="card" wx:for="{{addressList}}">
+    <view class="card" wx:for="{{addressList}}" wx:key>
 
       <view class="card-content">
         <view class="content-left">

@@ -1,0 +1,38 @@
+<view class="padding-lr">
+
+   <navigator class="group" hover-class="none" url="/pages/index/groupDetails/groupDetails">
+      <view class="flex justify-between border-bottom text-content">
+         <view>中医通经调理</view>
+         <view class="text-xs text-gray">拼团失败</view>
+      </view>
+      <view class="flex group_info">
+         <view>
+            <image src="/image/drug.png" mode="widthFix"></image>
+         </view>
+         <view>
+            <view class="text-sm text-gray">数量：1</view>
+            <view class="text-sm text-gray">总价：￥2</view>
+         </view>
+      </view>
+   </navigator>
+
+   <navigator class="group" hover-class="none" url="/pages/index/groupDetails/groupDetails">
+      <view class="flex justify-between border-bottom text-content">
+         <view>中医通经调理</view>
+         <view class="text-xs text-gray">拼团成功</view>
+      </view>
+      <view class="flex group_info">
+         <view>
+            <image src="/image/drug.png" mode="widthFix"></image>
+         </view>
+         <view>
+            <view class="text-sm text-gray">数量：1</view>
+            <view class="text-sm text-gray">总价：￥2</view>
+         </view>
+      </view>
+   </navigator>
+
+
+
+
+</view>
